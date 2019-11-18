@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'huggers#index'
+  resources :huggers, only: [:show] do
+    resources :bookings, only: [:new, :create]
+  end
+  resources :bookings, only: [:index]
+  resources :hugs, only: [:index, :show]
+  namespace :hugger do
+    resources :hugs
+    resources :bookings
+  end
 end
