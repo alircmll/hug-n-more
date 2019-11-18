@@ -3,5 +3,6 @@ class HuggersController < ApplicationController
   end
 
   def show
+
   end
 end
