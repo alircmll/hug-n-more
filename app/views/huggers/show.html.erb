@@ -1,9 +1,22 @@
 <div id="hugger" class="d-flex">
- <%# RENDU SIDEBAR  %>
+  <%# RENDU SIDEBAR  %>
   <%= render 'shared/sidebarhugger' %>
-  <section id="huggerContent" class="item ">
-    <div class="">
-      <div class="col-12 col-md-8">HUG SHOW</div>
+  <section id="huggerContent" class="item flex-grow-1">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="card-deck">
+          <% @hugs.each do |thing| %>
+            <div class="card mb-4">
+              <%= cl_image_tag thing.photo, class: "card-img-top img-fluid" %>
+              <div class="card-body">,
+                <h4 class="card-title"></h4>
+                <p class="card-text"><%= thing.description %></p>
+                <p class="card-text"><small class="text-muted"><%= thing.price %></small></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </section>
 </div>
