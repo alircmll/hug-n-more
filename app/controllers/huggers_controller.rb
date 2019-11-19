@@ -5,5 +5,4 @@ class HuggersController < ApplicationController
   def show
     @hugger = Hugger.find(params[:id])
   end
-  
 end

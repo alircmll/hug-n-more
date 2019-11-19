@@ -1,43 +1,60 @@
-<%# BUTTON MENU START %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<%# NAVBAR TOP MENU START %>
+<%# RAJOUTER JQUERY bg-light & Remove bg-transparant %>
+<%# ! Dans le Link To, rajouter un logo %>
+<nav id="navMenu" class="navbar fixed-top navbar-fixed-top navbar-light bg-transparent justify-content-between">
   <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "http://placehold.it/125x60" %>
+    HUG'N'MORE
   <% end %>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="" id="">
+    <%# MENU BURGER %>
     <button class="btn" data-target="#modalNavigation" data-toggle="modal" type="button">
       <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
+    <div class="burger burger-squeeze">
+      <div class="burger-lines"></div>
+    </div>
   </div>
-</div>
-<%# BUTTON MENU END %>
+</nav>
+<%# NAVBAR TOP MENU END %>
 <%# MODAL MENU START %>
-<div class="modal fade modal-fullscreen-menu" id="modalNavigation" role="dialog" tabindex="-1">
+<div class="modal fade" id="modalNavigation" role="dialog" tabindex="-1" aria-hidden="true">
   <%# BUTTON CLOSE %>
   <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-    <span class="sr-only">Close</span>
     <i class="fa fa-times" aria-hidden="true"></i>
   </button>
   <%# MODAL %>
   <div class="modal-dialog">
-    <ul class="list-group">
-      <%# LOGO %>
-      <li class="list-group-item text-left"><img class="logo" src="http://placehold.it/200x75" alt="logo"></li>
-      <%# LIST %>
-      <li class="list-group-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>Test</a></li>
-      <li class="list-group-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>Test</a></li>
-      <li class="list-group-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>Test</a></li>
-      <li class="list-group-item"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>Test</a></li>
-      <%# Separation %>
-      <hr>
-    </ul>
-    <%# MENU FOOTER %>
-    <div class="menu-footer">
-      <ul class="list-inline">
-        <li class="list-inline-item text-white"><a class="list-group-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-        <li class="list-inline-item text-white"><a class="list-group-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+    <div class="modal-content" role="document">
+      <ul id="menuModal" class="list-group text-center">
+        <%# LIST %>
+        <%# link_to 'text', path %>
+        <a href="#">
+          <li class="list-group-item menu-item"><span>Home</span></li>
+        </a>
+        <a href="#">
+          <li class="list-group-item menu-item"><span>Huggers</span></li>
+        </a>
+        <a href="#">
+          <li class="list-group-item menu-item"><span>Hugs Next To You</span></li>
+        </a>
+        <a href="#">
+          <li class="list-group-item menu-item"><span>Test</span></li>
+        </a>
+        <a href="#">
+          <li class="list-group-item menu-item"><span>Contact</span></li>
+        </a>
+        <%# MENU PROFIL / LOG OUT START %>
+        <hr>
+        <li class="footer-menu list-inline ">
+          <div class="d-flex justify-content-center">
+            <%# link_to 'text', path %>
+            <a class="list-group-item" href="#"><i class="far fa-user fa-lg"></i></a>
+            <a class="list-group-item" href="#"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+          </div>
+        </li>
+        <%# MENU PROFIL / LOG OUT END %>
       </ul>
     </div>
-    <%# CONDITIONAL MENU %>
   </div>
 </div>
 <%# MODAL MENU END %>

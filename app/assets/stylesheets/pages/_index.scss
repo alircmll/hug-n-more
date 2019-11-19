@@ -1,2 +1,14 @@
 // Import page-specific CSS files here.
 @import "home";
+
+#heroHeaderHome {
+    background-size: cover;
+    background-position: top center;
+    background-image: image-url('huggers-bg.jpg');
+
+    h1 {
+        font-weight: bold;
+    }
+
+
+}
