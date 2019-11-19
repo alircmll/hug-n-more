@@ -5,7 +5,10 @@ class HugsController < ApplicationController
   end
 
   def show
+    @hug = Hug.find(params[:id])
+    @hugger = @hug.user
   end
 end
 
 #----------Don't forget to permit :photo in hugs_params.
+ 
