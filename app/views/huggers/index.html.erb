@@ -1,6 +1,16 @@
-<section id="heroHeaderHome" class="hero jumbotron jumbotron-fluid vertical-center">
-  <div class="container">
-    <h1>Need some oxytocin ?</h1>
-    <h2 class="lead">Anywhere you want a Hugger is next to you...</h2>
+<div class="container ">
+  <h1>Category</h1>
+  <div class="row">
+    <% @huggers.each do |hugger| %>
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%= hugger.username %></h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <%= link_to "Details", hugger_path(hugger), class: "card-link" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-</section>
+</div>
