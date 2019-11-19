@@ -47,9 +47,18 @@
         <hr>
         <li class="footer-menu list-inline ">
           <div class="d-flex justify-content-center">
-            <%# link_to 'text', path %>
-            <a class="list-group-item" href="#"><i class="far fa-user fa-lg"></i></a>
-            <a class="list-group-item" href="#"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+            <%# link_to 'text', path %>            
+            <!-- <a class="list-group-item" href="#"><i class="far fa-user fa-lg"></i></a> -->
+            <!-- <a class="list-group-item" href="#"><i class="fas fa-sign-out-alt fa-lg"></i></a> -->            
+            <% if user_signed_in? %>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <p class="list-group-item"><i class="fas fa-sign-out-alt fa-lg"></i></p>
+              <% end %>
+            <% else %>
+              <%= link_to new_user_session_path do %>
+                <p class="list-group-item"><i class="far fa-user fa-lg"></i></p>
+              <% end %>
+            <% end %>
           </div>
         </li>
         <%# MENU PROFIL / LOG OUT END %>
