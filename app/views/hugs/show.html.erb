@@ -1,2 +1,25 @@
-<h1>Hugs#show</h1>
-<p>Find me in app/views/hugs/show.html.erb</p>
+<div class="d-flex"> 
+  <%= render 'shared/sidebarhugger' %>
+  <section class="item">
+    <div class="row">        
+        <%= cl_image_tag(@hug.photo, :width=>800, :height=>300, :crop=>"scale") %> 
+    </div>
+    <div class="row">        
+        <div class="col-8 shadow p-3 mb-5 bg-white rounded">            
+            <h1><%= @hug.title %></h1>
+            <h2><%= @hug.category.to_s %></h2>
+            <hr>
+            <p><%= @hug.description %></p>
+            <hr>
+            <p class="text-right">Price <%= @hug.price %> € </p>
+        </div>
+        <div class="col-4 shadow p-3 mb-5 bg-white rounded">           
+            <div id="avatar-botton" class="row">
+                <!-- <button type="button" name="" class="btn btn-primary btn-block">Booking</button> -->
+               <!-- <%= link_to 'Booking', root_path , :class => 'btn btn-primary btn-block' %> -->
+                 <!-- new_booking_path -->
+            </div>
+        </div>
+    </div>
+  </section>
+</div>
