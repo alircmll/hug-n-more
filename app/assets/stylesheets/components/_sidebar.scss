@@ -1,0 +1,23 @@
+#huggerSidebar {
+    padding: $pad;
+}
+
+.sidebar {
+    width: 25vw;
+    width: 25%;
+    padding: $pad;
+}
+
+@media screen and (max-width: 768px) {
+
+    #hugger {
+      flex-direction: column !important;
+    }
+    .item {
+      width: 100%;
+    }
+
+    #huggerSidebar {
+        min-height: 300px;
+    }
+  }
