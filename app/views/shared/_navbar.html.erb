@@ -2,7 +2,9 @@
 <%# NAVBAR TOP MENU START %>
 <%# RAJOUTER JQUERY bg-light & Remove bg-transparant %>
 <%# ! Dans le Link To, rajouter un logo %>
-<nav id="navMenu" class="navbar navbar-light bg-transparent justify-content-between">
+
+<%# ! Remettre fixed-top navbar-fixed-top pour une nav bar fixed%>
+<nav id="navMenu" class="navbar navbar-light bg-transparent justify-content-between"> 
   <%= link_to "#", class: "navbar-brand" do %>
     HUG'N'MORE
   <% end %>
@@ -11,9 +13,6 @@
     <button class="btn" data-target="#modalNavigation" data-toggle="modal" type="button">
       <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
-    <div class="burger burger-squeeze">
-      <div class="burger-lines"></div>
-    </div>
   </div>
 </nav>
 <%# NAVBAR TOP MENU END %>

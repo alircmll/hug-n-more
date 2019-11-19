@@ -5,6 +5,10 @@ class HuggersController < ApplicationController
   end
 
   def show
-    @hugger = Hugger.find(params[:id])
+    @hugger = User.find(params[:id])
+    @hugs = Hug.where(user_id: params[:id])
   end
 end
+
+
+# ------------Don't forget to permit :photo in huggers_params.
