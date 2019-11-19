@@ -9,17 +9,17 @@ require "faker"
     password: "azerty",
     address: "#{Faker::Address.city}, #{Faker::Address.country}"
   })
-  
+
   user.save
-  
+
   2.times do
-    price = (10..25).to_a    
+    price = (10..25).to_a
     cat = (0..3).to_a
-    
+
     hug = Hug.new({
         title: "Hug to #{Faker::TvShows::GameOfThrones.character}",
         description: Faker::TvShows::BojackHorseman.quote,
-        price: price.sample,      
+        price: price.sample,
         category: cat.sample,
         user: user
     })
@@ -37,6 +37,6 @@ end
     password: "azerty",
     address: "#{Faker::Address.city}, #{Faker::Address.country}"
   })
-  
+
   user.save
 end
