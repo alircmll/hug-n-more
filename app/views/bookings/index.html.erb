@@ -1,2 +1,13 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+
+<div class="container">
+  <% @bookings.each do |booking| %>
+  <div class="card-product my-3">
+    <%= cl_image_tag booking.hug.photo %>
+    <div class="card-product-infos">
+      <h2></h2>
+      <p><%=booking.check_in %> <%= booking.check_out%></p>
+      <p><%= booking.progress %></p>
+    </div>
+  </div>
+<% end %>
+</div>
