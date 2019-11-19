@@ -1,5 +1,6 @@
 require "faker"
 
+# Add huggers
 20.times do
   user = User.new({
     username: Faker::Internet.username,
@@ -23,10 +24,19 @@ require "faker"
         user: user
     })
     hug.save
-
-    #p hug.errors
   end
+end
 
+
+# Add consumers
+10.times do
+  user = User.new({
+    username: Faker::Internet.username,
+    email: Faker::Internet.email,
+    hugger: false,
+    password: "azerty",
+    address: "#{Faker::Address.city}, #{Faker::Address.country}"
+  })
   
-
+  user.save
 end
