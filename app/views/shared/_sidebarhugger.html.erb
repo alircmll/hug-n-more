@@ -1,14 +1,16 @@
-<section id="huggerSidebar" class="sidebar item d-flex flex-column justify-content-md-start">
-  <section id="avatar" class="row align-items-center flex-column">
-    <img class="avatar-sidebar" src="https://via.placeholder.com/150C/O%20https://placeholder.com/" alt="">
-    <h4><%= @hugger.username %></h4>
-    <div id="hugger-infos">
-      <div class="text-justify">
-      <p> <%= @hugger.address %></p>
+<section id="huggerSidebar" class="sidebar item d-flex flex-column ">
+  <section id="avatar" class="text-center flex-column vertical-center">
+    <div class="avatar-content">
+      <%= cl_image_tag @hugger.photo, class: "avatar-sidebar mb-3"%>
+      <h4><%= @hugger.username %></h4>
+      <div id="hugger-infos">
+        <div class="text-justify">
+          <p> <%= @hugger.address %></p>
+        </div>
       </div>
     </div>
   </section>
-  <section id="avatar-botton" class="row">
-    <button type="button" name="" id="" class="btn btn-primary btn-block">Contact</button>
+  <section id="hugger-bottom" class="d-flex flex-column justify-content-end pb-4">
+    <button type="button" name="" id="" class="btn btn-primary">Contact</button>
   </section>
 </section>

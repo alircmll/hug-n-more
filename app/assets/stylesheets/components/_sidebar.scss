@@ -1,23 +1,61 @@
+body {
+    height: 100%;
+}
+
 #huggerSidebar {
+    height: calc(100vh - 75px);
+}
+
+#avatar {
+    height: 400px;
+    // border-bottom-right-radius: 50%;
+    // COULEUR BACKGROUND AVATAR ET FONT COLOR
+    // background: $color2;
+    // color: $light-gray;
+}
+
+#hugger-infos {
     padding: $pad;
 }
 
-.sidebar {
-    width: 25vw;
-    width: 25%;
+#hugger-bottom {
+    flex-grow: 1;
     padding: $pad;
+    ;
+}
+
+.avatar-content {
+    height: 100%;
+    padding-top: 80px;
+}
+
+.sidebar {
+    width: 380px;
+    /*     width: 30%; */
+
 }
 
 @media screen and (max-width: 768px) {
 
     #hugger {
-      flex-direction: column !important;
-    }
-    .item {
-      width: 100%;
+        flex-direction: column !important;
+
+        #avatar {
+            border-bottom-right-radius: 0%;
+        }
+
+        .item {
+            width: 100%;
+        }
+
+        #huggerSidebar {
+            height: 400px
+        }
+
+        #hugger-bottom {
+            display: none !important;
+        }
     }
 
-    #huggerSidebar {
-        min-height: 300px;
-    }
-  }
+
+}
