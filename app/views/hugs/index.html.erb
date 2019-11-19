@@ -1,0 +1,87 @@
+<div class="under-banner d-flex justify-content-start ml-4">
+  <h1>Categories</h1>
+</div>
+
+<div class="under-banner d-flex justify-content-start ml-5">
+  <h4>Friendly</h4>
+</div>
+<div class="friendly">
+  <div class="row">
+    <% @hugs.where(category: 0).limit(4).each do |hug| %>
+      <div class="col-3">
+        <div class="card-trip m-4">
+          <img src=<%= cl_image_path hug.photo %> />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= link_to hug.title, hug_path(hug), :style=>'color: black;', class: 'stretched-link' %></h2>
+              <p>Short description here!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="under-banner d-flex justify-content-start ml-5">
+  <h4>Tiny</h4>
+</div>
+<div class="tiny">
+  <div class="row">
+    <% @hugs.where(category: 1).limit(4).each do |hug| %>
+      <div class="col-3">
+        <div class="card-trip m-4">
+          <img src=<%= cl_image_path hug.photo %> />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= link_to hug.title, hug_path(hug), :style=>'color: black;', class: 'stretched-link' %></h2>
+              <p>Short description here!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="under-banner d-flex justify-content-start ml-5">
+  <h4>Fast</h4>
+</div>
+<div class="fast">
+  <div class="row">
+    <% @hugs.where(category: 2).limit(4).each do |hug| %>
+      <div class="col-3">
+        <div class="card-trip m-4">
+          <img src=<%= cl_image_path hug.photo %> />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= link_to hug.title, hug_path(hug), :style=>'color: black;', class: 'stretched-link' %></h2>
+              <p>Short description here!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="under-banner d-flex justify-content-start ml-5">
+  <h4>More</h4>
+</div>
+<div class="more">
+  <div class="row">
+    <% @hugs.where(category: 3).limit(4).each do |hug| %>
+      <div class="col-3">
+        <div class="card-trip m-4">
+          <img src=<%= cl_image_path hug.photo %> />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= link_to hug.title, hug_path(hug), :style=>'color: black;', class: 'stretched-link' %></h2>
+              <p>Short description here!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
