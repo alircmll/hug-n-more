@@ -1,16 +1,16 @@
-<div class="container ">
-  <h1>Category</h1>
-  <div class="row">
-    <% @huggers.each do |hugger| %>
-      <div class="col-sm">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title"><%= hugger.username %></h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <%= link_to "Details", hugger_path(hugger), class: "card-link" %>
+<div class="under-banner d-flex justify-content-start ml-5">
+  <h1>Categories</h1>
+</div>
+  <div class="container">
+    <div class="row">
+      <% @huggers.each do |hugger| %>
+        <div class="col-4">
+          <div class="card-category m-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <div class="card-body">
+              <%= link_to hugger.username, hugger_path(hugger), :style=>'color: white;' %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 </div>
