@@ -1,13 +1,23 @@
-
 <div class="container">
-  <% @bookings.each do |booking| %>
-  <div class="card-product my-3">
-    <%= cl_image_tag booking.hug.photo %>
-    <div class="card-product-infos">
-      <h2></h2>
-      <p><%=booking.check_in %> <%= booking.check_out%></p>
-      <p><%= booking.progress %></p>
-    </div>
-  </div>
-<% end %>
+  <h2>Bookings recap</h2>
+
 </div>
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-10 offset-1 d-">
+      <% @bookings.each do |booking| %>
+        <div class="card-product">
+          <%= cl_image_tag booking.hug.photo %>
+          <div class="card-product-infos">
+            <h2>Product name</h2>
+             <span>StartCalinou: <%=booking.check_in %></span>
+              <p>StopCalinou: <%= booking.check_out%></p>
+              <p><%= booking.hug.price %> €</p>
+              <p> <%= booking.progress %></p>
+              </div>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>

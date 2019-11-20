@@ -3,13 +3,9 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def show
-    @booking = Booking.find(params[:id])
-  end
-
-  def new
-    @booking = Booking.new
-    @hug = Hug.find(params[:hug_id])
+ def new
+  @booking = Booking.new
+  @hug = Hug.find(params[:hug_id])
   end
 
   def create
@@ -19,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.hug = @hug
 
     if @booking.save
-      redirect_to bookings_path(@booking)
+      redirect_to bookings_path
     else
       render :new
     end
