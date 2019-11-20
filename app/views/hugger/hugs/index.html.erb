@@ -1,0 +1,25 @@
+<div class="container mt-3">
+  <h2> Mes Hugs:</h2>
+</div>
+
+
+<div class="container">
+
+
+  <div id="friendly" class="row">
+    <div class="card-deck">
+    <% @hugs.each do |hug|%>
+      <div class="wrapper mx-4">
+        <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+          <div class="info">
+            <h1><%= hug.title %></h1>
+            <p><%= hug.description.first(70) %>...</p>
+            <button><%= link_to "Details", hugger_hug_path(hug) %></button>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+
+</div>
