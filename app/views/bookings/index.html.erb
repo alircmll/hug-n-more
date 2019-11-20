@@ -2,7 +2,7 @@
   <h2>Bookings recap</h2>
   <div class="container">
     <div class="row mt-4">
-      <div class="col-10 offset-1 d-">
+      <div class="col-10 offset-1">
         <% @bookings.each do |booking| %>
         <div class="card-product my-5 justify-content-between">
           <%= cl_image_tag booking.hug.photo %>
