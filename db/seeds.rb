@@ -1,9 +1,9 @@
 puts "Destroy all"
 
 
-User.destroy_all
-Hug.destroy_all
 Booking.destroy_all
+Hug.destroy_all
+User.destroy_all
 
 
 puts "Creating users..."
