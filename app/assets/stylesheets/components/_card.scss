@@ -101,20 +101,7 @@
   margin: 0 0 1rem;
 }
 
-// CARDS HUGGER#SHOW ++++++++++++++++++++++++++++++
 
-#huggerContent {
-  padding: $pad;
-
-  .card-deck {
-
-    .card {
-      border-radius: $border-radius;
-
-    }
-  }
-
-}
 
 // CARDS HOME PAGE ++++++++++++++++++++++++++++++
 
@@ -162,30 +149,29 @@
 
 // card home page
 
-* {
-  box-sizing: border-box;
-}
-
 .wrapper {
   display: flex;
   // width: 90%;
   justify-content: space-around;
+  border-radius: $border-radius;
 }
 
 .card {
-  width: 280px;
-  height: 360px;
-  border-radius: 15px;
-  padding: 1.5rem;
-  background: white;
+  width: 300px;
+  height: 350px;
+  // border-radius: $border-radius;
+  padding: 2rem;
   position: relative;
   display: flex;
   align-items: flex-end;
   transition: 0.4s ease-out;
-  box-shadow: 0px 7px 10px rgba(black, 0.5);
+  background-color: rgba(0, 0, 0, 0);
+  // box-shadow: 0px 7px 10px rgba(black, 0.5);
+  border: none;
+  justify-content: center;
 
   &:hover {
-    transform: translateY(20px);
+    transform: translateY(0px); // Changer 0 pour lever vers le haut la card
 
     &:before {
       opacity: 1;
@@ -193,7 +179,9 @@
 
     .info {
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateY(20px);
+      margin: auto;
+      
     }
   }
 
@@ -227,7 +215,7 @@
     z-index: 3;
     color: white;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(0px);
     transition: 0.5s;
 
     h1 {
@@ -252,7 +240,9 @@
       transition: 0.4s ease;
 
       a {
-        color: black;
+        color: $primary;
+        text-decoration: none;
+        
       }
 
       &:hover {

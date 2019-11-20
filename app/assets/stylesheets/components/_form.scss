@@ -1,3 +1,5 @@
+// For All form / Give underline input
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -8,7 +10,7 @@ select.form-control {
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0;
-  color: $primary;
+  color: $primary-dark;
 }
 
 input[type="text"]:focus,
@@ -18,5 +20,55 @@ select.form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
   background: transparent;
-  color: $primary;
+  color: $primary-dark;
+}
+
+// FORM NEW_USER
+
+#deviceForm, #bookingForm {
+  height: calc(100vh - (75px));
+
+  h2 {
+    font-weight: 900;
+    font-size: 3rem;
+  }
+
+  .row {
+    padding-top: 50px;
+  }
+
+  label {
+    color: snow;
+  }
+
+  ::placeholder {
+    color: $primary-dark;
+    opacity: 1;
+  }
+
+  :-ms-input-placeholder,
+  ::-ms-input-placeholder,
+  .text-muted {
+    color: $primary-dark !important;
+  }
+
+  #booking_check_in_1i, 
+  #booking_check_in_2i, 
+  #booking_check_in_3i,
+  #booking_check_out_1i,
+  #booking_check_out_2i,
+  #booking_check_out_3i
+  {
+    background: $primary-dark;
+    color: white;
+    font-size: 14px;
+  }
+  
+  #new_user, #new_booking {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: $primary-light;
+    border-radius: $border-radius;
+  }
+
 }
