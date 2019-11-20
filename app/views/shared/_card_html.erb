@@ -46,34 +46,34 @@
 <!-- Card bookings#index -->
 
 <div class="container">
-  <div class="row mt-4">
-    <div class="col-10 offset-1 d-">
-      <% @bookings.each do |booking| %>
-      <div class="card-product">
-        <%= cl_image_tag booking.hug.photo %>
-        <div class="card-product-infos ml-4">
-          <h2><%= booking.hug.title %></h2>
-          <br>
-           <span><i class="fas fa-calendar-check"></i> <%=booking.check_in %> | <i class="fas fa-calendar-times"></i> <%= booking.check_out%></span>
-           <br>
-          <span><i class="fas fa-tags"></i> <%= booking.hug.price %> €</span>
+    <div class="row mt-4">
+      <div class="col-10 offset-1 d-">
+        <% @bookings.each do |booking| %>
+        <div class="card-product my-5 justify-content-between">
+          <%= cl_image_tag booking.hug.photo %>
+          <div class="card-product-infos">
+            <h2><%= booking.hug.title %></h2>
+            <br>
+            <span><i class="fas fa-calendar-check"></i> <%=booking.check_in %> | <i class="fas fa-calendar-times"></i> <%= booking.check_out%></span>
+            <br>
+            <span><i class="fas fa-tags"></i> <%= booking.hug.price %> €</span>
+          </div>
+          <div class="card-product-progress d-flex align-items-center justify-content-center">
+            <% if booking.progress == "pending" %>
+            <p><i class="fas fa-hourglass-half"></i> <%= booking.progress.capitalize %></p>
+            <% end %>
+            <% if booking.progress == "accepted" %>
+            <p><i class="fas fa-user-check"></i> <%= booking.progress.capitalize %></p>
+            <% end %>
+            <% if booking.progress == "refused" %>
+            <p><i class="fas fa-user-times"></i> <%= booking.progress.capitalize %></p>
+            <% end %>
+            <% if booking.progress == "canceled" %>
+            <p><i class="fas fa-times-circle"></i> <%= booking.progress.capitalize %></p>
+            <% end %>
+          </div>
         </div>
-        <div class="card-product-progress d-flex align-items-center justify-content-center">
-          <% if booking.progress == "pending" %>
-            <p><i class="fas fa-hourglass-half"></i> <%= booking.progress %></p>
-          <% end %>
-          <% if booking.progress == "accepted" %>
-            <p><i class="fas fa-user-check"></i> <%= booking.progress %></p>
-          <% end %>
-          <% if booking.progress == "refused" %>
-            <p><i class="fas fa-user-times"></i> <%= booking.progress %></p>
-          <% end %>
-          <% if booking.progress == "canceled" %>
-            <p><i class="fas fa-times-circle"></i> <%= booking.progress %></p>
-          <% end %>
-        </div>
+        <% end %>
       </div>
     </div>
-    <% end %>
   </div>
-</div>
