@@ -1,17 +1,13 @@
-class Hugger::BookingsController < ApplicationController  
+class Hugger::BookingsController < ApplicationController
   def edit
-    @bookings = current_user.bookings
+    @booking = Booking.find(params[:id])
+    @hug = @booking.hug
   end
 
   def update
     @booking = Booking.find(params[:id])
-    @booking.progress = params[:progress]    
-
-    if @booking.save
-      redirect_to edit_hugger_hug_booking_path
-    else
-      render :new
-    end
+    @booking.update(bookings_params)
+    redirect_to bookings_path, notice: 'Your hug was successfully updated.'
   end
 
   private
