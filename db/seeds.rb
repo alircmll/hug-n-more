@@ -22,7 +22,7 @@ puts "Creating users..."
 c = User.create!(
     username:     'Lampoulpe',
     email:        'lam@gmail.com',
-    address:      '7 Rue des Bahutiers,,33000 Bordeaux',
+    address:      '7 Rue des Bahutiers,33000 Bordeaux',
     password:     'azerty',
     hugger:        true)
 d = User.create!(
