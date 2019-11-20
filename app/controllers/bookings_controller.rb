@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.hug = @hug
 
     if @booking.save
-      redirect_to hugger_path(@hug)
+      redirect_to bookings_path(@booking)
     else
       render :new
     end
