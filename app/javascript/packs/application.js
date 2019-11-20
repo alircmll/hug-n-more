@@ -1,7 +1,11 @@
 import "bootstrap";
 import $ from "jquery";
 
-// MENU 
+// IMPORT
+
+import { openNav, closeNav } from "plugins/sidelog.js";
+
+// MENU
 // $(window).scroll(function() {
 //   /* affix after scrolling 100px */
 //   if ($(document).scrollTop() >= 500) {
@@ -13,17 +17,5 @@ import $ from "jquery";
 //   }
 // });
 
-// USER SIDE LOGIN
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "340px";
-  document.getElementById("main").style.marginLeft = "340px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-} 
-
-$('#userMenuBtn').click(openNav);
-$('#closeUserBtn').click(closeNav);
+$("#userMenuBtn").click(openNav);
+$("#closeUserBtn").click(closeNav);
