@@ -1,87 +1,82 @@
-<div class="under-banner d-flex justify-content-start ml-4">
-  <h1>Categories</h1>
-</div>
-
-<div class="under-banner d-flex justify-content-start ml-5">
-  <h4>Friendly</h4>
-</div>
-<div class="friendly">
-  <div class="row">
-    <% @hugs.where(category: 0).limit(4).each do |hug| %>
-      <div class="col-3">
-        <div class="card-trip m-4">
-          <img src=<%= cl_image_path hug.photo %> />
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= link_to hug.title, hug_path(hug), :style=>'color: black;', class: 'stretched-link' %></h2>
-              <p>Short description here!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="">Welcome to Hug'N'More</h1>
+    <p class="lead">Rajouter une image</p>
   </div>
 </div>
-
-<div class="under-banner d-flex justify-content-start ml-5">
-  <h4>Tiny</h4>
-</div>
-<div class="tiny">
+<section class="container mb-4">
   <div class="row">
-    <% @hugs.where(category: 1).limit(4).each do |hug| %>
-      <div class="col-3">
-        <div class="card-trip m-4">
-          <img src=<%= cl_image_path hug.photo %> />
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= link_to hug.title, hug_path(hug), :style=>'color: black;', class: 'stretched-link' %></h2>
-              <p>Short description here!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <div class="col-12 mb-4">
+      <h2>Friendly</h2>
+    </div>
   </div>
-</div>
-
-<div class="under-banner d-flex justify-content-start ml-5">
-  <h4>Fast</h4>
-</div>
-<div class="fast">
+  <div id="friendly" class="row">
+    <div class="card-deck">
+      <% @hugs.where(category: 0).limit(4).each do |hug| %>
+        <%= link_to hug_path(hug),class: "card" do %>
+          <%= cl_image_tag hug.photo, class: "card-img" %>
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
+            <h4 class="card-title"><%= hug.title%></h4>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section class="container mb-4">
   <div class="row">
-    <% @hugs.where(category: 2).limit(4).each do |hug| %>
-      <div class="col-3">
-        <div class="card-trip m-4">
-          <img src=<%= cl_image_path hug.photo %> />
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= link_to hug.title, hug_path(hug), :style=>'color: black;', class: 'stretched-link' %></h2>
-              <p>Short description here!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <div class="col-12">
+      <h2>Tiny</h2>
+    </div>
   </div>
-</div>
-
-<div class="under-banner d-flex justify-content-start ml-5">
-  <h4>More</h4>
-</div>
-<div class="more">
+  <div id="tiny" class="row">
+    <div class="card-deck">
+      <% @hugs.where(category: 1).limit(4).each do |hug| %>
+        <%= link_to hug_path(hug),class: "card" do %>
+          <%= cl_image_tag hug.photo, class: "card-img" %>
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
+            <h4 class="card-title"><%= hug.title%></h4>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section class="container">
   <div class="row">
-    <% @hugs.where(category: 3).limit(4).each do |hug| %>
-      <div class="col-3">
-        <div class="card-trip m-4">
-          <img src=<%= cl_image_path hug.photo %> />
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= link_to hug.title, hug_path(hug), :style=>'color: black;', class: 'stretched-link' %></h2>
-              <p>Short description here!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <div class="col-12">
+      <h2>Fast</h2>
+    </div>
   </div>
-</div>
+  <div id="fast" class="row">
+    <div class="card-deck">
+      <% @hugs.where(category: 2).limit(4).each do |hug| %>
+        <%= link_to hug_path(hug),class: "card" do %>
+          <%= cl_image_tag hug.photo, class: "card-img" %>
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
+            <h4 class="card-title"><%= hug.title%></h4>
+          </div>
+        <% end %>
+      <% end %>
+      </div>
+  </div>
+</section>
+<section class="container mb-4">
+  <div class="row">
+    <div class="col-12">
+      <h2>More</h2>
+    </div>
+  </div>
+  <div id="more" class="row mb-4">
+    <div class="card-deck">
+      <% @hugs.where(category: 3).limit(4).each do |hug| %>
+        <%= link_to hug_path(hug),class: "card" do %>
+          <%= cl_image_tag hug.photo, class: "card-img" %>
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
+            <h4 class="card-title"><%= hug.title%></h4>
+          </div>
+        <% end %>
+      <% end %>
+      </div>
+  </div>
+</section>
