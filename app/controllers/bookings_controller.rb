@@ -3,9 +3,9 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
- def new
-  @booking = Booking.new
-  @hug = Hug.find(params[:hug_id])
+  def new
+    @booking = Booking.new
+    @hug = Hug.find(params[:hug_id])
   end
 
   def create
