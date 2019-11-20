@@ -5,7 +5,7 @@
 
 <div class="container mt-3 mb-6">
   <%= simple_form_for [:hugger, @hug] do |f| %>
-    <%= f.input :title%>
+    <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :price, as: :currency %>
     <%= f.input :category, collection: Hug.categories %>
