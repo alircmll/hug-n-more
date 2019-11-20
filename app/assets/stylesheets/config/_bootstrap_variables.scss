@@ -11,16 +11,54 @@ $font-size-base: 1rem;
 
 // Colors
 $body-color: $gray;
-$primary:    $blue;
+// $primary:    $blue;
 $success:    $green;
 $info:       $yellow;
 $danger:     $red;
 $warning:    $orange;
 
 // Buttons & inputs' radius
-$border-radius:    2px;
+$border-radius:    24px;
 $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // GENERAL PADDING FOR CONTENAIR ONLY
 $pad: 0.5rem 2rem;
+
+// Random-color
+@function random-color($min: 0, $max: 255, $alpha: 1) {
+	@if $min < 0 {
+		$min: -1;
+	} @else {
+		$min: $min - 1;
+	}
+	@if $max > 255 {
+		$max: 256;
+	} @else {
+		$max: $max + 1;
+	}
+	$red: random($max) + $min;
+	$green: random($max) + $min;
+	$blue: random($max) + $min;
+	@return rgba($red, $green, $blue, $alpha);
+}
+
+$primary: random-color($min: 100, $max: 100);
+$secondary: random-color($min: 100, $max: 100);
+$primary-light: mix(#ffffff, $primary, 25%);
+$primary-dark: mix(#000000, $primary, 25%);
+
+@mixin border-gradient($from, $to, $weight: 0) {
+	$mix-main: mix($from, $to);
+	$mix-sub-from: mix($mix-main, $from);
+	$mix-sub-to: mix($mix-main, $to);
+	
+	box-shadow: 0 2px 0 $weight rgba($mix-sub-to, .25),
+				0 -2px 0 $weight rgba($mix-sub-from, .25),
+				2px 0 0 $weight rgba($mix-sub-to, .25),
+				-2px 0 0 $weight  rgba($mix-sub-from, .25),
+				2px -2px 0 $weight rgba($mix-main, .5),
+				-2px 2px 0 $weight rgba($mix-main, .5),
+				2px 2px 0 $weight rgba($to, .75),
+				-2px -2px 0 $weight rgba($from, .75);
+  }
