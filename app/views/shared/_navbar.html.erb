@@ -8,11 +8,15 @@
   <% end %>
   <div class="d-flex" id="">
     <%# LOGIN USER %>
-    <button id="userMenuBtn" class="btn" >
-      <i class="fa fa-user" aria-hidden="true"></i>
-    </button>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <button class="btn"><i class="fas fa-sign-out-alt fa-lg"></i></button>
+      <% end %>
+    <% else %>
+      <button id="userMenuBtn" class="btn"><i class="fa fa-user"></i></button>
+    <% end %>
     <%# MENU DOTS %>
-    <a id="dotsMenu" class="btn menu" data-target="#modalNavigation" data-toggle="modal" type="button">
+    <a id="dotsMenu" class="btn menu" data-target="#modalNavigation" data-toggle="modal">
       <div class="pix"></div>
       <div class="pix"></div>
       <div class="pix"></div>
@@ -29,7 +33,7 @@
 <%# MODAL MENU START %>
 <div class="modal fade" id="modalNavigation" role="dialog"  aria-hidden="true">
   <%# BUTTON CLOSE %>
-  <a id="dotsMenuClose" class="btn menu active" data-target="#modalNavigation" data-toggle="modal" type="button" aria-label="Close" class="close" data-dismiss="modal">
+  <a id="dotsMenuClose" class="btn menu active" data-target="#modalNavigation" data-toggle="modal" aria-label="Close" class="close" data-dismiss="modal">
     <div class="pix"></div>
     <div class="pix"></div>
     <div class="pix"></div>
@@ -43,24 +47,12 @@
   <%# MODAL %>
   <div class="modal-dialog">
     <div class="modal-content" role="document">
-      <ul id="menuModal" class="list-group text-left">
+      <ul id="menuModal" class="list-group text-center">
         <%# LIST %>
         <%# link_to 'text', path %>
-        <a href="#">
-          <li class="list-group-item menu-item"><span>Home</span></li>
-        </a>
-        <a href="#">
-          <li class="list-group-item menu-item"><span>Huggers</span></li>
-        </a>
-        <a href="#">
-          <li class="list-group-item menu-item"><span>Hugs Next To You</span></li>
-        </a>
-        <a href="#">
-          <li class="list-group-item menu-item"><span>Test</span></li>
-        </a>
-        <a href="#">
-          <li class="list-group-item menu-item"><span>Contact</span></li>
-        </a>
+        <%= link_to 'Home', root_path, class: "list-group-item menu-item" %>
+        <%= link_to 'Huggers', huggers_path, class: "list-group-item menu-item" %>
+        <%= link_to 'My Bookings', bookings_path, class: "list-group-item menu-item" %>
         <%# MENU PROFIL / LOG OUT START %>
         <hr>
         <li class="footer-menu list-inline ">

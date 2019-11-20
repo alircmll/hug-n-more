@@ -6,7 +6,7 @@
 }
 
 #modalNavigation {
-  background-color: $dark-dark; // BG DU MENU
+  background-color: $contrast; // BG DU MENU
 
   .logo {
     font-family: "Poppins" !important;
@@ -118,7 +118,7 @@
 
 // MENU DOTS
 
-$pix-size: 6px;
+$pix-size: 6px; // <---- Definir la taille du menu
 
 #dotsMenuClose {
   position: absolute;
