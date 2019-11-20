@@ -1,0 +1,20 @@
+// HUGGER#SHOW ++++++++++++++++++++++++++++++
+
+#huggerContent, 
+#hugContent {
+    padding: 0;
+    height: calc(100vh - 75px);
+
+    .row {
+        margin: 0 0 0 0;
+    }
+  
+    .card-deck {
+  
+      .card {
+        border-radius: $border-radius;
+  
+      }
+    }
+  
+  }

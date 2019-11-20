@@ -1,7 +1,7 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
+<div id="heroHeaderHome" class="jumbotron jumbotron-fluid">
+  <div  class="container d-flex flex-column">
     <h1 class="">Welcome to Hug'N'More</h1>
-    <p class="lead">Rajouter une image</p>
+    <p class="lead">Take your time... make a hug ♥️</p> 
   </div>
 </div>
 
@@ -17,7 +17,7 @@
       <div class="wrapper mx-4">
         <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
           <div class="info">
-            <h1><%= hug.title %></h1>
+            <h3><%= hug.title %></h3>
             <p><%= hug.description.first(70) %>...</p>
             <button><%= link_to "Details", hug_path(hug) %></button>
           </div>
@@ -40,7 +40,7 @@
       <div class="wrapper mx-4">
         <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
           <div class="info">
-            <h1><%= hug.title %></h1>
+            <h3><%= hug.title %></h3>
             <p><%= hug.description.first(70) %>...</p>
             <button><%= link_to "Details", hug_path(hug) %></button>
           </div>
@@ -63,7 +63,7 @@
       <div class="wrapper mx-4">
         <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
           <div class="info">
-            <h1><%= hug.title %></h1>
+            <h3><%= hug.title %></h3>
             <p><%= hug.description.first(70) %>...</p>
             <button><%= link_to "Details", hug_path(hug) %></button>
           </div>
@@ -86,7 +86,7 @@
       <div class="wrapper mx-4">
         <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
           <div class="info">
-            <h1><%= hug.title %></h1>
+            <h2><%= hug.title %></h2>
             <p><%= hug.description.first(70) %>...</p>
             <button><%= link_to "Details", hug_path(hug) %></button>
           </div>
