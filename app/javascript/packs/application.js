@@ -1,6 +1,5 @@
 import "bootstrap";
 import $ from "jquery";
-
 // IMPORT
 
 import { openNav, closeNav } from "plugins/sidelog.js";

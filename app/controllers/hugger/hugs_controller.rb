@@ -1,5 +1,4 @@
 class Hugger::HugsController < ApplicationController
-
   def index
     @hugs = current_user.hugs
   end
@@ -29,13 +28,13 @@ class Hugger::HugsController < ApplicationController
   def update
     @hug = Hug.find(params[:id])
     @hug.update(hug_params)
-    redirect_to hugger_hugs_path(@hug), notice: 'Your hug was successfully updated.'
+    redirect_to hugger_hug_path(@hug), notice: 'Your hug was successfully updated.'
   end
 
   def destroy
     @hug = Hug.find(params[:id])
     @hug.destroy
-    redirect_to root_path
+    redirect_to hugger_hugs_path
   end
 
   private
