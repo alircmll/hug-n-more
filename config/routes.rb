@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'hugs#index'
   resources :huggers, only: [:show, :index]
-  resources :bookings, only: [:index, :show]
   resources :hugs, only: [:index, :show] do
     resources :bookings, only: [:new, :create]
   end

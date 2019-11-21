@@ -108,39 +108,56 @@
 // CARDS
 
 .card-deck .card {
-  margin-right: 16px; 
+  margin-right: 16px;
   margin-left: 0px;
 }
 
 
 // CARDS HOME PAGE ++++++++++++++++++++++++++++++
 
-#friendly.row,
-#tiny.row,
-#more.row,
-#fast.row {
-  margin-right: 0px;
-  margin-left: 0px;
-}
+// #friendly.row,
+// #tiny.row,
+// #more.row,
+// #fast.row {
+//   margin-right: 0px;
+//   margin-left: 0px;
+// }
 
 #friendly,
 #tiny,
 #more,
 #fast {
 
+  margin: 40px 0px 80px 0px;
+  background-color: #fff;
+
+  &>.row:first-child {
+    padding: 80px 60px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+  }
+
   //  MEDIA QUERIES
   @media (max-width: 576px) {
     .card-deck {
       // paddi dng: 2rem;
     }
-  }
 
+    .row:first-child {
+      padding: 80px 0px;
+    }
+  }
 
   @media (min-width: 576px) and (max-width: 767.98px) {
     .card-deck .wrapper {
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;
     }
+
+
 
     .card-deck {
       // padding: 2rem;

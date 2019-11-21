@@ -10,5 +10,4 @@ class HuggersController < ApplicationController
   end
 end
 
-
 # ------------Don't forget to permit :photo in huggers_params.
