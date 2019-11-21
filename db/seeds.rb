@@ -10,26 +10,75 @@ puts "Creating users..."
  a = User.create!(
     username:     'Ali972',
     email:        'ali@gmail.com',
-    address:      '9 rue Courbin,33000 Bordeaux',
+    address:      '9 rue Courbin, 33000 Bordeaux',
     password:     'azerty',
-    hugger:        false)
-
+    hugger:        false,
+    photo: "IMG_0319_grrvbs")
  b = User.create!(
     username:     'Flopaille',
     email:        'flo@gmail.com',
-    address:      '3 place amédée larrieu,33000 Bordeaux',
+    address:      '3 place amédée larrieu, 33000 Bordeaux',
     password:     'azerty',
     hugger:        false)
   c = User.create!(
     username:     'Lampoulpe',
     email:        'lam@gmail.com',
-    address:      '7 Rue des Bahutiers,33000 Bordeaux',
+    address:      '7 Rue des Bahutiers, 33000 Bordeaux',
     password:     'azerty',
-    hugger:        true)
+    hugger:        true,
+    photo:         "https://res.cloudinary.com/ddo2iitps/image/upload/v1574347411/flz9qcggiocajxznatom.jpg")
   d = User.create!(
     username:     'Xdel',
     email:        'xd@gmail.com',
-    address:      '30 Rue du Pas-Saint-Georges,33000 Bordeaux',
+    address:      '30 Rue du Pas-Saint-Georges, 33000 Bordeaux',
+    password:     'azerty',
+    hugger:        true)
+  e = User.create!(
+    username:     'Tom33',
+    email:        'tom@gmail.com',
+    address:      '30 Place de la Victoire, 33000 Bordeaux',
+    password:     'azerty',
+    hugger:        true)
+  f = User.create!(
+    username:     'Valdu56',
+    email:        'val56@gmail.com',
+    address:      '12 rue des Meuniers, 33000 Bordeaux',
+    password:     'azerty',
+    hugger:        true)
+  g = User.create!(
+    username:     'TonioMC',
+    email:        'toutoun@gmail.com',
+    address:      '24 rue des Remparts, 33000 Bordeaux',
+    password:     'azerty',
+    hugger:        true)
+  h = User.create!(
+    username:     'MaelMorbi',
+    email:        'maelmor@gmail.com',
+    address:      '14 rue de Cheverus, 33000 Bordeaux',
+    password:     'azerty',
+    hugger:        true)
+  i = User.create!(
+    username:     'EmilienLB',
+    email:        'milou@gmail.com',
+    address:      '24 rue des Remparts, 33000 Bordeaux',
+    password:     'azerty',
+    hugger:        true)
+  j = User.create!(
+    username:     'SylvainBla',
+    email:        'sylvainB@gmail.com',
+    address:      '12 rue Mouneyra, 33000 Bordeaux',
+    password:     'azerty',
+    hugger:        true)
+  k = User.create!(
+    username:     'SimonGarf',
+    email:        'simong@gmail.com',
+    address:      '58 rue de Pessac, 33000 Bordeaux',
+    password:     'azerty',
+    hugger:        true)
+  l = User.create!(
+    username:     'EvaWag',
+    email:        'evawag@gmail.com',
+    address:      '76 rue de Belfort, 33000 Bordeaux',
     password:     'azerty',
     hugger:        true)
 
@@ -43,7 +92,7 @@ hugs_attributes = [
     title:         'Calin au coin du feu',
     category:      3,
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          a
+    user:          f
   },
   {
     description:  'Je ne mord pas et ne griffe pas non plus ',
@@ -52,7 +101,7 @@ hugs_attributes = [
     category:     2,
     user_id:      'azerty',
     photo:        "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:         b
+    user:         j
   },
   {
     description:  "Je n'ai jamais pu refuser quoi que ce soit à une brune aux yeux marrons",
@@ -88,7 +137,7 @@ hugs_attributes = [
     category:     2,
     user_id:      'azerty',
     photo:        "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:         a
+    user:         e
   },
   {
     description:   "Entièrement rénovée avec tout le confort et la modernité",
@@ -97,7 +146,7 @@ hugs_attributes = [
     category:      1,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          b
+    user:          l
   },
   {
     description:   "Calin si affinité",
@@ -106,7 +155,7 @@ hugs_attributes = [
     category:      3,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          b
+    user:          k
   },
   {
     description:   "Calin doux mais rapide",
@@ -133,7 +182,7 @@ hugs_attributes = [
     category:      0,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          a
+    user:          k
   },
   {
     description:   "Calin de vengeance",
@@ -142,7 +191,7 @@ hugs_attributes = [
     category:      0,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          a
+    user:          h
   },
   {
     description:   "Calin public",
@@ -151,7 +200,7 @@ hugs_attributes = [
     category:      0,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          a
+    user:          j
   },
   {
     description:   "Calin dans les nuages",
@@ -160,7 +209,7 @@ hugs_attributes = [
     category:      3,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          b
+    user:          e
   },
   {
     description:   "Calin au fil de l'eau",
@@ -169,7 +218,7 @@ hugs_attributes = [
     category:      1,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          b
+    user:          c
   },
   {
     description:   "Calin au wagon",
@@ -178,7 +227,7 @@ hugs_attributes = [
     category:      1,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          b
+    user:          l
   },
   {
     description:   "Calin par surprise",
@@ -187,7 +236,7 @@ hugs_attributes = [
     category:      1,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          b
+    user:          k
   },
   {
     description:   "Calin d'écoute",
@@ -196,7 +245,7 @@ hugs_attributes = [
     category:      2,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    user:          b
+    user:          j
   }
 ]
 
