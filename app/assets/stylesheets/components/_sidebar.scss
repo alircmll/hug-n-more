@@ -4,10 +4,12 @@ body {
 
 #huggerSidebar {
     height: calc(100vh - 75px);
+    border-right: $primary 1px solid;
+    background-color: white;
 }
 
 #avatar {
-    height: 400px;
+    // height: 400px;
     // border-bottom-right-radius: 50%;
     // COULEUR BACKGROUND AVATAR ET FONT COLOR
     // background: $color2;
@@ -15,7 +17,6 @@ body {
 }
 
 #hugger-infos {
-    padding: $pad;
 }
 
 #hugger-bottom {
