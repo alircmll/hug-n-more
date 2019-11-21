@@ -1,9 +1,13 @@
 class Hugger::BookingsController < ApplicationController  
   def edit
-    @bookings = current_user.bookings
+    @pendings = current_user.bookings.filter { |booking| booking.pending? }.sort_by { |booking| booking.check_in}.reverse
+    @accepteds = current_user.bookings.filter { |booking| booking.accepted? }.sort_by { |booking| booking.check_in}.reverse
+    @refuseds  = current_user.bookings.filter { |booking| booking.refused? }.sort_by { |booking| booking.check_in}.reverse
+    @canceleds  = current_user.bookings.filter { |booking| booking.canceled? }.sort_by { |booking| booking.check_in}.reverse
+  
   end
 
-  def update
+  def update 
     @booking = Booking.find(params[:id])
     @booking.progress = params[:progress]    
 
