@@ -4,11 +4,11 @@
   <section id="hugContent" class="">
     <div class="row">
       <%# IMAGE %>
-      <div class="col-xs-12 col-md-12 col-lg-6  align-self-center pr-lg-4 py-sm-4">
+      <div class="col-xs-12 col-md-12 col-lg-6  align-self-top pr-lg-4 py-sm-4">
         <img class="img-hug-show" src="<%= cl_image_path(@hug.photo) %>" alt=" <%= @hug.description %>  ">
       </div>
       <%# DETAILS %>
-      <div class="col-xs-12 col-md-12 col-lg-6 align-self-center pl-lg-4 pt-md-4 pt-xs-4 pt-sm-4">
+      <div class="col-xs-12 col-md-12 col-lg-6 align-self-top pl-lg-4 pt-md-4 pt-xs-4 pt-sm-4">
         <h1 class="text-cold text-primary"><%= @hug.title %></h1>
         <hr>
         <p class="h6 text-uppercase"> Category - <span class="text-primary"><%= @hug.category.to_s.capitalize %></span></p>
