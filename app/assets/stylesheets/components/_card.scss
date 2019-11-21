@@ -185,7 +185,8 @@
   justify-content: center;
 
   &:hover {
-    transform: translateY(0px); // Changer 0 pour lever vers le haut la card
+    transform: translateY(0px);// Changer 0 pour lever vers le haut la card
+    -webkit-transform : translateY(0px);
 
     &:before {
       opacity: 1;
@@ -194,9 +195,10 @@
     .info {
       opacity: 1;
       transform: translateY(20px);
+      -webkit-transform : translateY(20px);
       margin: auto;
-
     }
+
   }
 
   &:before {
@@ -230,7 +232,9 @@
     color: white;
     opacity: 0;
     transform: translateY(0px);
+    -webkit-transform : translateY(0px);
     transition: 0.5s;
+    margin: auto;
 
     h1 {
       margin: 0px;
