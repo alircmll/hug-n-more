@@ -3,6 +3,10 @@
   align-items: center;
 }
 
-* {
-  box-sizing: border-box;
+.text-primary-dark {
+  color: $primary-dark;
+}
+
+.text-primary-light {
+  color: $primary-light;
 }

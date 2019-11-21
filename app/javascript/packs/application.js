@@ -1,7 +1,7 @@
 import "bootstrap";
 import $ from "jquery";
-// IMPORT
 
+// IMPORT VAR, LET, CONST
 import { openNav, closeNav } from "plugins/sidelog.js";
 import { collapse } from "plugins/collapsible.js";
 
@@ -18,8 +18,10 @@ import { collapse } from "plugins/collapsible.js";
 //   }
 // });
 
+// MENU
 $("#userMenuBtn").click(openNav);
 $("#closeUserBtn").click(closeNav);
-collapse();
 
+// Collaspse ? 
+collapse();
 

@@ -105,19 +105,23 @@
   border-radius: 12%;
 }
 
-.card-deck {
-  margin: 0 -15px;
-  justify-content: space-between;
-
-}
+// CARDS
 
 .card-deck .card {
-  margin: 0 0 1rem;
+  margin-right: 16px; 
+  margin-left: 0px;
 }
-
 
 
 // CARDS HOME PAGE ++++++++++++++++++++++++++++++
+
+#friendly.row,
+#tiny.row,
+#more.row,
+#fast.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
 
 #friendly,
 #tiny,
@@ -127,19 +131,19 @@
   //  MEDIA QUERIES
   @media (max-width: 576px) {
     .card-deck {
-      padding: 2rem;
+      // paddi dng: 2rem;
     }
   }
 
 
   @media (min-width: 576px) and (max-width: 767.98px) {
     .card-deck .wrapper {
-      -ms-flex: 0 0 48.7%;
-      flex: 0 0 48.7%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
     }
 
     .card-deck {
-      padding: 2rem;
+      // padding: 2rem;
     }
   }
 
@@ -165,7 +169,7 @@
 
 .wrapper {
   display: flex;
-  // width: 90%;
+  width: 100%;
   justify-content: space-around;
   border-radius: $border-radius;
 }
@@ -186,6 +190,7 @@
 
   &:hover {
     transform: translateY(0px); // Changer 0 pour lever vers le haut la card
+    -webkit-transform: translateY(0px);
 
     &:before {
       opacity: 1;
@@ -194,9 +199,10 @@
     .info {
       opacity: 1;
       transform: translateY(20px);
+      -webkit-transform: translateY(20px);
       margin: auto;
-
     }
+
   }
 
   &:before {
@@ -230,7 +236,9 @@
     color: white;
     opacity: 0;
     transform: translateY(0px);
+    -webkit-transform: translateY(0px);
     transition: 0.5s;
+    margin: auto;
 
     h1 {
       margin: 0px;

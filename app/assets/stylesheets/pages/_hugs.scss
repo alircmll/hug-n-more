@@ -1,20 +1,21 @@
-// HUGGER#SHOW ++++++++++++++++++++++++++++++
-
-#huggerContent, 
+// HUGGER#SHOW +++++++++++++++++++++++++++++
+#huggerContent,
 #hugContent {
-    padding: 0;
-    height: calc(100vh - 75px);
+  padding: $pad;
+  height: 100%;
+  // height: calc(100vh - (75px + 72px );
 
-    .row {
-        margin: 0 0 0 0;
-    }
-  
-    .card-deck {
-  
-      .card {
-        border-radius: $border-radius;
-  
-      }
-    }
-  
+  .row {
+    margin: 0 0 0 0;
+    min-height: calc(100vh - (75px + 75px));
   }
+
+  .card-deck {
+
+    .card {
+      border-radius: $border-radius;
+
+    }
+  }
+
+}
