@@ -1,4 +1,13 @@
 #passpartout {
     background-color: $primary-dark;
-    padding: 3.5% 2.5% 0;
+    padding: $passpartout;
 }
+
+
+@media (max-width: 575.98px) { 
+    #passpartout {
+        background-color: $primary-dark;
+        padding: 0;
+    }
+
+ }

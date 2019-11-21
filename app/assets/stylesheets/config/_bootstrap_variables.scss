@@ -26,6 +26,10 @@ $border-radius-sm: 2px;
 // GENERAL PADDING FOR CONTENAIR ONLY
 $pad: 0.5rem 2rem;
 
+$passpartout:36px 36px 0;
+$fullpage: -36px -36px 0;
+
+
 // Random-color
 @function random-color($min: 0, $max: 255, $alpha: 1) {
 	@if $min < 0 {

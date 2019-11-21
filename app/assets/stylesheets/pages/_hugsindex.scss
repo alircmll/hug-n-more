@@ -1,10 +1,34 @@
 #heroHeaderHome {
     background-size: cover;
     background-position: center center;
-    background-image: image-url('huggers-bg.jpg');
-    height: 50vh;
+    background-image: linear-gradient(to right, rgba($primary, 0.3)), image-url('huggers-bg.jpg');
+    height: 70vh;
+    margin: $fullpage;
+    color: white;
 
     h1 {
         font-weight: bold;
     }
 }
+
+  
+
+#searchBar {
+    // background-color:white;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    top: -26px;
+    
+
+    #searchBarContent {
+      
+    }
+}
+
+
+@media (max-width: 575.98px) { 
+    #heroHeaderHome {
+        margin: 0;
+    }
+ }
