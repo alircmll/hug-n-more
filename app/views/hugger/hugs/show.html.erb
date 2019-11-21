@@ -18,7 +18,7 @@
 
   <div class="item flex-grow-1">
     <div class="row bg-white justify-content-start">
-      <div class="img_show"><%= cl_image_tag @hug.photo, height: 300, width: 400, crop: :fill %>
+      <div class="img_show"><%= cl_image_tag @hug.photo, height: 300, width: 400, crop: :fill, filter: :grayscale %>
       </div>
     </div>
     <div class="row">
