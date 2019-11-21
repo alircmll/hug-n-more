@@ -1,8 +1,8 @@
-<!-- <div class="container"> -->
-    <div class="row mt-4">
+<div class="container">
+    <div class="row mt-2">
       <div class="col-10 offset-1 d-">
         <% bookings.each do |booking| %>
-        <div class="card-product my-5 justify-content-between">
+        <div class="card-product my-3 justify-content-between">
           <%= cl_image_tag booking.hug.photo %>
           <div class="card-product-infos">
             <h2><%= booking.hug.title %></h2>
@@ -13,7 +13,7 @@
           </div>
           <div class="card-product-progress d-flex align-items-center justify-content-center">
             <% if booking.progress == "pending" %>
-            <p><i class="fas fa-hourglass-half"></i> <%= booking.progress.capitalize %></p>
+            <p><i class="fas fa-hourglass-half"></i> <%= booking.progress.capitalize %></p>            
             <% end %>
             <% if booking.progress == "accepted" %>
             <p><i class="fas fa-user-check"></i> <%= booking.progress.capitalize %></p>
@@ -25,8 +25,24 @@
             <p><i class="fas fa-times-circle"></i> <%= booking.progress.capitalize %></p>
             <% end %>
           </div>
+          <% if booking.progress == "pending" %>
+          <div class="col">
+            <div class="row">
+                <%= simple_form_for [:hugger, booking.hug, booking] do |f| %>                  
+                  <%= f.input :progress, :as => :hidden, :input_html => { :value => "accepted" } %>
+                  <%= f.button :submit, "Accepted", class: "btn btn-primary" %>
+                <% end %>
+            </div>
+            <div class="row">
+                <%= simple_form_for [:hugger, booking.hug, booking] do |f| %>                  
+                  <%= f.input :progress, :as => :hidden, :input_html => { :value => "refused" } %>
+                  <%= f.button :submit, "Refused", class: "btn btn-primary" %>
+                <% end %>
+            </div>
+          </div>
+          <%end %>
         </div>
         <% end %>
       </div>
     </div>
-<!-- </div> -->
+</div>

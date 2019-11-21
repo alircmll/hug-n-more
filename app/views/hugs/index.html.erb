@@ -2,6 +2,22 @@
   <div  class="container d-flex flex-column">
     <h1 class="">Welcome to Hug'N'More</h1>
     <p class="lead">Take your time... make a hug ♥️</p>
+
+    <div class="input-group m-5">            
+        <div class="input-group-append">
+          <%= form_tag hugs_path, method: :get do %>
+            <%= text_field_tag :s,
+              params[:s],
+              class: "form-control",
+              placeholder: "Find a hug"
+            %>      
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+
+        </div>
+      <% end %>
+    </div>
+
   </div>
 </div>
 <section id="friendly" class="container-fluid">
@@ -9,7 +25,7 @@
     <div class="col-12 mb-4">
       <h2 class="text-primary">Friendly</h2>
     </div>
-    <% @hugs.where(category: 0).each do |hug| %>
+    <% @hugs.select(&:friendly?).each do |hug| %>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
         <div class="wrapper">
           <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
@@ -29,7 +45,7 @@
     <div class="col-12">
       <h2 class="text-primary">Tiny</h2>
     </div>
-    <% @hugs.where(category: 1).each do |hug| %>
+    <% @hugs.select(&:tiny?).each do |hug| %>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
         <div class="wrapper">
           <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
@@ -49,7 +65,7 @@
     <div class="col-12 mb-4">
       <h2 class="text-primary">Fast</h2>
     </div>
-    <% @hugs.where(category: 2).each do |hug| %>
+    <% @hugs.select(&:fast?).each do |hug| %>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4" >
         <div class="wrapper">
           <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
@@ -69,7 +85,7 @@
     <div class="col-12 mb-4">
       <h2 class="text-primary">More</h2>
     </div>
-    <% @hugs.where(category: 3).each do |hug| %>
+    <% @hugs.select(&:more?).each do |hug| %>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
         <div class="wrapper">
           <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
