@@ -5,8 +5,8 @@ class HuggersController < ApplicationController
   end
 
   def show
-    @hugger = User.find(params[:id])
-    @hugs = Hug.where(user_id: params[:id])
+    @hugger = User.find(params[:id]) 
+    @hugs = Hug.where(user_id: params[:id])  
   end
 end
 

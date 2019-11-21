@@ -50,10 +50,20 @@
       <ul id="menuModal" class="list-group text-center">
         <%# LIST %>
         <%# link_to 'text', path %>
-        <%= link_to 'Home', root_path, class: "list-group-item menu-item" %>
+        <%= link_to 'Home', root_path, class: "list-group-item menu-item" %>        
         <%= link_to 'Huggers', huggers_path, class: "list-group-item menu-item" %>
-        <%= link_to 'My Bookings', bookings_path, class: "list-group-item menu-item" %>
-        <%= link_to 'Sign Up', new_user_registration_path, class: "list-group-item menu-item" %>
+        <% if user_signed_in? %>
+          <% if current_user.hugger %>
+            <%= link_to 'My Hugs', hugger_hugs_path, class: "list-group-item menu-item" %>
+            <%= link_to 'My Pendings', edit_hugger_hug_booking_path(1,1), class: "list-group-item menu-item" %>
+          <% end %>
+          <%= link_to 'My Bookings', bookings_path, class: "list-group-item menu-item" %>
+        <% end %>
+        
+        <% if !user_signed_in? %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: "list-group-item menu-item" %>
+        <% end %>
+        
         <%# MENU PROFIL / LOG OUT START %>
         <hr>
         <li class="footer-menu list-inline ">
