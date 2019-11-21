@@ -3,16 +3,6 @@ class HuggersController < ApplicationController
   def index
     @huggers = User.where(hugger: true)
   end
-
-  def show
-    @hugger = User.find(params[:id])
-    @hugs = Hug.where(user_id: params[:id])
-  end
-
-  def edit
-    @hugger = User.find(params[:id])
-  end
-
 end
 
 # ------------Don't forget to permit :photo in huggers_params.
