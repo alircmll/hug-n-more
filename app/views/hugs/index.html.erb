@@ -4,15 +4,13 @@
     <p class="lead">Take your time... make a hug ♥️</p>
   </div>
 </div>
-<section class="container mb-4">
-  <div class="row">
+<section id="friendly" class="container-fluid">
+  <div  class="row">
     <div class="col-12 mb-4">
-      <h2>Friendly</h2>
+      <h2 class="text-primary">Friendly</h2>
     </div>
-  </div>
-  <div id="friendly" class="row">
     <% @hugs.where(category: 0).each do |hug| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
         <div class="wrapper">
           <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
             <div class="info">
@@ -26,15 +24,13 @@
     <% end %>
   </div>
 </section>
-<section class="container mb-4">
-  <div class="row">
-    <div class="col-12 mb-4">
-      <h2>Tiny</h2>
+<section id="tiny" class="container-fluid">
+  <div  class="row text-center">
+    <div class="col-12">
+      <h2 class="text-primary">Tiny</h2>
     </div>
-  </div>
-  <div id="friendly" class="row">
     <% @hugs.where(category: 1).each do |hug| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
         <div class="wrapper">
           <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
             <div class="info">
@@ -48,15 +44,13 @@
     <% end %>
   </div>
 </section>
-<section class="container mb-4">
-  <div class="row">
+<section id="fast" class="container-fluid">
+  <div  class="row">
     <div class="col-12 mb-4">
-      <h2>Fast</h2>
+      <h2 class="text-primary">Fast</h2>
     </div>
-  </div>
-  <div id="friendly" class="row">
     <% @hugs.where(category: 2).each do |hug| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4" >
         <div class="wrapper">
           <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
             <div class="info">
@@ -70,15 +64,13 @@
     <% end %>
   </div>
 </section>
-<section class="container mb-4">
-  <div class="row">
+<section id="more" class="container-fluid">
+  <div  class="row">
     <div class="col-12 mb-4">
-      <h2>More</h2>
+      <h2 class="text-primary">More</h2>
     </div>
-  </div>
-  <div id="friendly" class="row">
     <% @hugs.where(category: 3).each do |hug| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
         <div class="wrapper">
           <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
             <div class="info">
