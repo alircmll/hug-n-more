@@ -9,7 +9,7 @@ select.form-control {
   border-bottom: 1px solid $primary;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-radius: 0;
+  // border-radius: 0;
   color: $primary-dark;
 }
 
@@ -25,16 +25,15 @@ select.form-control:focus {
 
 // FORM NEW_USER
 
-#deviceForm, #bookingForm {
-  height: calc(100vh - (75px));
+#deviceForm,
+#bookingForm {
+  height: calc(100vh - (75px + 72px));
 
   h2 {
     font-weight: 900;
     font-size: 3rem;
-  }
-
-  .row {
-    padding-top: 50px;
+    color: $primary-dark;
+    padding: 2rem 0;
   }
 
   label {
@@ -52,23 +51,30 @@ select.form-control:focus {
     color: $primary-dark !important;
   }
 
-  #booking_check_in_1i, 
-  #booking_check_in_2i, 
+  #booking_check_in_1i,
+  #booking_check_in_2i,
   #booking_check_in_3i,
+  #booking_check_in_4i,
+  #booking_check_in_5i,
   #booking_check_out_1i,
   #booking_check_out_2i,
-  #booking_check_out_3i
-  {
+  #booking_check_out_3i,
+  #booking_check_out_4i,
+  #booking_check_out_5i {
     background: $primary-dark;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
-  
-  #new_user, #new_booking {
-    margin-top: 2rem;
+
+  #new_user,
+  #new_booking {
     padding: 2rem;
     background: $primary-light;
-    border-radius: $border-radius;
+    // border-radius: $border-radius;
+  }
+
+  .btn:hover {
+    color: white !important;
   }
 
 }

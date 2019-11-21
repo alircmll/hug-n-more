@@ -106,8 +106,7 @@
 }
 
 .card-deck {
-  margin: 0 -15px;
-  justify-content: space-between;
+  margin: 0;
 
 }
 
@@ -119,10 +118,18 @@
 
 // CARDS HOME PAGE ++++++++++++++++++++++++++++++
 
+.row {
+  margin-left: 0;
+}
+
 #friendly,
 #tiny,
 #more,
 #fast {
+
+  .row {
+    margin-left: 0;
+  }
 
   //  MEDIA QUERIES
   @media (max-width: 576px) {
