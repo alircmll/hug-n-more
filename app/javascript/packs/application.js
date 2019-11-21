@@ -3,6 +3,7 @@ import $ from "jquery";
 // IMPORT
 
 import { openNav, closeNav } from "plugins/sidelog.js";
+import { collapse } from "plugins/collapsible.js";
 
 // MENU
 // $(window).scroll(function() {
@@ -18,3 +19,5 @@ import { openNav, closeNav } from "plugins/sidelog.js";
 
 $("#userMenuBtn").click(openNav);
 $("#closeUserBtn").click(closeNav);
+collapse();
+

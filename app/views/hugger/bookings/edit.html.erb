@@ -1,3 +1,24 @@
+
+<div class="container">
+  <h2>liste des bookings du hugger</h2>
+  <button class="collapsible active"><i class="fas fa-hourglass-half"></i>  Pendings</button>
+    <div class="clpcontent" style="display: block" >
+        <%= render partial: "listbookings", locals: { bookings: @pendings } %>
+    </div>
+  <button class="collapsible"><i class="fas fa-user-check"></i> Accepted </button>
+    <div class="clpcontent">
+        <%= render partial: "listbookings", locals: { bookings: @accepteds } %>
+    </div>
+  <button class="collapsible"><i class="fas fa-user-times"></i> Refused </button>
+    <div class="clpcontent">
+      <%= render partial: "listbookings", locals: { bookings: @refuseds } %>
+    </div>
+  <button class="collapsible"><i class="fas fa-times-circle"></i> Canceled </button>
+    <div class="clpcontent">
+        <%= render partial: "listbookings", locals: { bookings: @canceleds } %>
+    </div>
+</div>
+
 <div class="mt-3 d-flex pl-5 py-3">
   <h2>Edit your bookings : </h2>
 </div>
