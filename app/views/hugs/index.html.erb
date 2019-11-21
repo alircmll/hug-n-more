@@ -4,7 +4,6 @@
     <p class="lead">Take your time... make a hug ♥️</p>
   </div>
 </div>
-
 <section class="container mb-4">
   <div class="row">
     <div class="col-12 mb-4">
@@ -12,22 +11,21 @@
     </div>
   </div>
   <div id="friendly" class="row">
-    <div class="card-deck">
     <% @hugs.where(category: 0).each do |hug| %>
-      <div class="wrapper mx-4">
-        <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
-          <div class="info">
-            <h3><%= hug.title %></h3>
-            <p><%= hug.description.first(70) %>...</p>
-            <button><%= link_to "Details", hug_path(hug) %></button>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+        <div class="wrapper">
+          <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+            <div class="info">
+              <h3><%= hug.title %></h3>
+              <p><%= hug.description.first(70) %>...</p>
+              <button><%= link_to "Details", hug_path(hug) %></button>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-    </div>
   </div>
 </section>
-
 <section class="container mb-4">
   <div class="row">
     <div class="col-12 mb-4">
@@ -35,22 +33,21 @@
     </div>
   </div>
   <div id="friendly" class="row">
-    <div class="card-deck">
     <% @hugs.where(category: 1).each do |hug| %>
-      <div class="wrapper mx-4">
-        <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
-          <div class="info">
-            <h3><%= hug.title %></h3>
-            <p><%= hug.description.first(70) %>...</p>
-            <button><%= link_to "Details", hug_path(hug) %></button>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+        <div class="wrapper">
+          <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+            <div class="info">
+              <h3><%= hug.title %></h3>
+              <p><%= hug.description.first(70) %>...</p>
+              <button><%= link_to "Details", hug_path(hug) %></button>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-    </div>
   </div>
 </section>
-
 <section class="container mb-4">
   <div class="row">
     <div class="col-12 mb-4">
@@ -58,22 +55,21 @@
     </div>
   </div>
   <div id="friendly" class="row">
-    <div class="card-deck">
     <% @hugs.where(category: 2).each do |hug| %>
-      <div class="wrapper mx-4">
-        <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
-          <div class="info">
-            <h3><%= hug.title %></h3>
-            <p><%= hug.description.first(70) %>...</p>
-            <button><%= link_to "Details", hug_path(hug) %></button>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+        <div class="wrapper">
+          <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+            <div class="info">
+              <h3><%= hug.title %></h3>
+              <p><%= hug.description.first(70) %>...</p>
+              <button><%= link_to "Details", hug_path(hug) %></button>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-    </div>
   </div>
 </section>
-
 <section class="container mb-4">
   <div class="row">
     <div class="col-12 mb-4">
@@ -81,18 +77,18 @@
     </div>
   </div>
   <div id="friendly" class="row">
-    <div class="card-deck">
     <% @hugs.where(category: 3).each do |hug| %>
-      <div class="wrapper mx-4">
-        <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
-          <div class="info">
-            <h2><%= hug.title %></h2>
-            <p><%= hug.description.first(70) %>...</p>
-            <button><%= link_to "Details", hug_path(hug) %></button>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+        <div class="wrapper">
+          <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+            <div class="info">
+              <h3><%= hug.title %></h3>
+              <p><%= hug.description.first(70) %>...</p>
+              <button><%= link_to "Details", hug_path(hug) %></button>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-    </div>
   </div>
 </section>
