@@ -5,6 +5,7 @@ import $ from "jquery";
 import { openNav, closeNav } from "plugins/sidelog.js";
 import { collapse } from "plugins/collapsible.js";
 
+
 // MENU
 // $(window).scroll(function() {
 //   /* affix after scrolling 100px */
@@ -23,3 +24,4 @@ $("#closeUserBtn").click(closeNav);
 
 // Collaspse ? 
 collapse();
+

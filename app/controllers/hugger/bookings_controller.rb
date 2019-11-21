@@ -12,7 +12,7 @@ class Hugger::BookingsController < ApplicationController
   def update 
     @booking = Booking.find(params[:id])
     @booking.update(bookings_params)
-    redirect_to bookings_path, notice: 'Your hug was successfully updated.'
+    redirect_to edit_hugger_hug_booking_path, notice: 'Your hug was successfully updated.'
   end
 
   private
