@@ -92,7 +92,7 @@ hugs_attributes = [
   },
   {
     description:   "Entièrement rénovée avec tout le confort et la modernité",
-    price:         25,
+    price:         70,
     title:         'Calin gourmand',
     category:      1,
     user_id:       'azerty',
@@ -101,7 +101,7 @@ hugs_attributes = [
   },
   {
     description:   "Calin si affinité",
-    price:         25,
+    price:         13,
     title:         'Calin poussé',
     category:      3,
     user_id:       'azerty',
@@ -110,7 +110,7 @@ hugs_attributes = [
   },
   {
     description:   "Calin doux mais rapide",
-    price:         25,
+    price:         5,
     title:         'Calin efficace',
     category:      2,
     user_id:       'azerty',
@@ -119,7 +119,7 @@ hugs_attributes = [
   },
   {
     description:   "Calin dès l'aube",
-    price:         25,
+    price:         37,
     title:         'Calin matinal',
     category:      0,
     user_id:       'azerty',
@@ -128,12 +128,75 @@ hugs_attributes = [
   },
   {
     description:   "Calin sous pression",
-    price:         25,
+    price:         41,
     title:         'Calin pas de tout repos',
     category:      0,
     user_id:       'azerty',
     photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
     user:          a
+  },
+  {
+    description:   "Calin de vengeance",
+    price:         20,
+    title:         'Calin mauvais',
+    category:      0,
+    user_id:       'azerty',
+    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    user:          a
+  },
+  {
+    description:   "Calin public",
+    price:         8,
+    title:         'Rendez-vous dans le parc',
+    category:      0,
+    user_id:       'azerty',
+    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    user:          a
+  },
+  {
+    description:   "Calin dans les nuages",
+    price:         457,
+    title:         "Si l'envie vous prends de vous envoyer en l'air",
+    category:      3,
+    user_id:       'azerty',
+    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    user:          b
+  },
+  {
+    description:   "Calin au fil de l'eau",
+    price:         129,
+    title:         "Il va y avoir de la houle",
+    category:      1,
+    user_id:       'azerty',
+    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    user:          b
+  },
+  {
+    description:   "Calin au wagon",
+    price:         25,
+    title:         "Histoire de se remettre sur les rails",
+    category:      1,
+    user_id:       'azerty',
+    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    user:          b
+  },
+  {
+    description:   "Calin par surprise",
+    price:         5,
+    title:         "Attention",
+    category:      1,
+    user_id:       'azerty',
+    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    user:          b
+  },
+  {
+    description:   "Calin d'écoute",
+    price:         457,
+    title:         "Une épaule pour discuter...",
+    category:      2,
+    user_id:       'azerty',
+    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    user:          b
   }
 ]
 
