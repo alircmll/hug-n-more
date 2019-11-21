@@ -2,7 +2,7 @@ class HugsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    if params[:s].present? 
+    if params[:s].present?
       @hugs = search(params[:s])
     else
       @hugs = Hug.all
@@ -17,11 +17,11 @@ class HugsController < ApplicationController
 private
 
 def search(querySearch)
-  hugs = [] 
+  hugs = []
   Hug.algolia_search(querySearch).each do |hug|
     hugs << hug
   end
-  
+
   users = User.algolia_search(querySearch)
   users.each do |user|
     user.hugs.each do  |hug|
@@ -34,5 +34,3 @@ end
 
 end
 
-#----------Don't forget to permit :photo in hugs_params.
- 

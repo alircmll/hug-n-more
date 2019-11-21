@@ -1,0 +1,12 @@
+<div class="container min-height-container">
+  <div class="container mt-3 mb-6">
+    <%= simple_form_for @user do |f| %>
+      <%= f.input :username %>
+      <%= f.input :address %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
