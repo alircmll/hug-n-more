@@ -1,10 +1,11 @@
 class Hugger::HugsController < ApplicationController
+  before_action :find_hug, only: [ :show, :edit, :update, :destroy ]
+
   def index
     @hugs = current_user.hugs
   end
 
-  def show
-    @hug = Hug.find(params[:id])
+  def show    
   end
 
   def new
@@ -22,17 +23,14 @@ class Hugger::HugsController < ApplicationController
   end
 
   def edit
-    @hug = Hug.find(params[:id])
   end
 
-  def update
-    @hug = Hug.find(params[:id])
+  def update    
     @hug.update(hug_params)
     redirect_to hugger_hug_path(@hug), notice: 'Your hug was successfully updated.'
   end
 
-  def destroy
-    @hug = Hug.find(params[:id])
+  def destroy    
     @hug.destroy
     redirect_to hugger_hugs_path
   end
@@ -41,5 +39,12 @@ class Hugger::HugsController < ApplicationController
 
   def hug_params
     params.require(:hug).permit(:description, :photo, :category, :title, :price)
+  end
+
+  def find_hug 
+    @hug = Hug.find(params[:id])    
+    unless @hug.user == current_user
+      redirect_to hugger_hugs_path, notice: 'It\'s not your hug !'
+    end
   end
 end
