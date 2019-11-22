@@ -22,7 +22,7 @@ body{
   }
 .Profile{
   margin-left:auto;
-    z-index: 9999;
+  z-index: 9999;
   margin-right:auto;
   text-align:center;
   -webkit-transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
@@ -31,14 +31,14 @@ body{
   width:300px;
   height:200px;
   border-radius:50%;
-  margin-top:34vh;
+  // margin-top:34vh;
   }
   .clickProfile{
     margin-left:auto;
     border-top-left-radius:20px;
     border-top-right-radius:20px;
     margin-right:auto;
-    background:#191919;
+    // background:#191919;
     text-align:center;
     padding:20px 0px 20px 0px;
     -webkit-transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
@@ -46,7 +46,7 @@ body{
     transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
     width:300px;
     height:120px;
-    margin-top:24vh;
+    // margin-top:24vh;
   }
   .Img{
     // background: url('https://cdn2.digitalartsonline.co.uk/cmsdata/slideshow/3513552/polybreno_1500.jpg');
@@ -68,7 +68,7 @@ body{
   }
     .clickPopUp{
       position: relative;
-      background: #e74c3c;
+      background: $primary;
       display:none;
       opacity:1;
       width:300px;
@@ -83,7 +83,7 @@ body{
     }
 .PopUp {
   position: relative;
-  background: #e74c3c;
+  background: $primary;
   width:300px;
   opacity:0;
   font-family: 'Helvetica Neue', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
@@ -109,7 +109,7 @@ body{
   position: absolute;
   pointer-events: none;
   border-color: rgba(231, 76, 60, 0);
-  border-bottom-color: #e74c3c;
+  border-bottom-color: $primary;
   border-width: 10px;
   margin-left: -10px;
 
@@ -197,14 +197,14 @@ body{
       -webkit-transition:cubic-bezier(.34,.43,0,1.02) 0.4s;
       -moz-transition:cubic-bezier(.34,.43,0,1.02) 0.4s;
       transition:cubic-bezier(.34,.43,0,1.02) 0.4s;
-      border-top: 1px solid #891d1d;
-      border-left: 0px solid #891d1d;
+      border-top: 1px solid $primary;
+      border-left: 0px solid $primary;
         }
         .b{
-          border-bottom: 1px solid #891d1d;
+          border-bottom: 1px solid $primary;
           }
       .buttons:hover{
-        background:#FF7364;
-        border-left: 3px solid #891d1d;
+        background:$primary;
+        border-left: 3px solid $primary;
         box-shadow: inset 0px 0px 8px rgba(0,0,0,0.2);
         }
