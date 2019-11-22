@@ -9,13 +9,15 @@
       <div class="col-xs-12 col-md-12 col-lg-6 align-self-top pl-lg-4 pt-md-4 pt-xs-4 pt-sm-4">
         <h1 class="text-cold text-primary"><%= @hug.title %></h1>
         <hr>
-        <p class="h6 text-uppercase"> Category - <span class="text-primary"><%= @hug.category.to_s.capitalize %></span></p>
-        <p><%# @hug.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dolorum voluptate rerum odit deleniti, fugiat commodi cum atque eius tenetur corporis earum hic in unde laboriosam consectetur incidunt reiciendis labore. </p>
+        <div class="contentDescription">
+          <p class="h6 text-uppercase"> Category - <span class="text-primary"><%= @hug.category.to_s.capitalize %></span></p>
+          <p><%= @hug.description %> </p>
+        </div>
         <hr>
         <p class="text-right bold">Price <span class="text-primary"><%= @hug.price %></span> € </p>
         <hr>
         <div class="text-center pt-4">
-          <p class="h4 text-primary mb-4">Shared with 🍑 by</p>
+          <p class="h4 text-primary mb-4">Shared with ♥️ by</p>
           <%= cl_image_tag @hugger.photo, class: "avatar-sidebar mb-4"%>
           <h4><%= @hugger.username %></h4>
           <div id="hugger-infos mb-4">
