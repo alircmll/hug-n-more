@@ -3,8 +3,13 @@
 #hugContent {
   padding: $pad;
   height: 100%;
-  
+  flex-grow: 1;
   // height: calc(100vh - (75px + 72px );
+
+  .contentDescription {
+    margin-bottom: 70px;
+    }
+
 
   .row {
     margin: 0 0 0 0;
