@@ -1,32 +1,38 @@
 <div class="container">
-  <h2>Bookings recap</h2>
+  <h2>Bookings recap'</h2>
   <div class="container min-height-container">
     <div class="row mt-4">
       <div class="col-10 offset-1">
         <% @bookings.each do |booking| %>
-          <div class="card-product my-5 justify-content-between">
-            <%= cl_image_tag booking.hug.photo, height: 300, width: 400, crop: :fill%>
-            <div class="card-product-infos">
-              <h2><%= booking.hug.title %></h2>
-              <br>
-              <span><i class="fas fa-calendar-check"></i> <%= booking.check_in.strftime('%d-%m-%Y %H:%M') %> | <i class="fas fa-calendar-times"></i> <%= booking.check_out.strftime('%d-%m-%Y %H:%M') %></span>
-              <br>
-              <%= link_to "cancel", booking_path(booking), method: :delete  %>
-              <span><i class="fas fa-tags"></i> <%= booking.hug.price %> €</span>
+          <div class="full-card d-flex flex-row">
+            <div class="card-product my-5 justify-content-between">
+              <%= cl_image_tag booking.hug.photo, height: 300, width: 400, crop: :fill%>
+              <div class="card-product-infos">
+                <h2><%= booking.hug.title %></h2>
+                <br>
+                <span><i class="fas fa-calendar-check"></i> <%=booking.check_in %> | <i class="fas fa-calendar-times"></i> <%= booking.check_out%></span>
+                <br>
+                <span><i class="fas fa-tags"></i> <%= booking.hug.price %> €</span>
+              </div>
+              <div class="card-product-progress d-flex align-items-center justify-content-center">
+                <% if booking.progress == "pending" %>
+                  <p><i class="fas fa-hourglass-half"></i> <%= booking.progress.capitalize %></p>
+                <% end %>
+                <% if booking.progress == "accepted" %>
+                  <p><i class="fas fa-user-check"></i> <%= booking.progress.capitalize %></p>
+                <% end %>
+                <% if booking.progress == "refused" %>
+                  <p><i class="fas fa-user-times"></i> <%= booking.progress.capitalize %></p>
+                <% end %>
+                <% if booking.progress == "canceled" %>
+                  <p><i class="fas fa-times-circle"></i> <%= booking.progress.capitalize %></p>
+                <% end %>
+              </div>
             </div>
-            <div class="card-product-progress d-flex align-items-center justify-content-center">
-              <% if booking.progress == "pending" %>
-                <p><i class="fas fa-hourglass-half"></i> <%= booking.progress.capitalize %></p>
-              <% end %>
-              <% if booking.progress == "accepted" %>
-                <p><i class="fas fa-user-check"></i> <%= booking.progress.capitalize %></p>
-              <% end %>
-              <% if booking.progress == "refused" %>
-                <p><i class="fas fa-user-times"></i> <%= booking.progress.capitalize %></p>
-              <% end %>
-              <% if booking.progress == "canceled" %>
-                <p><i class="fas fa-times-circle"></i> <%= booking.progress.capitalize %></p>
-              <% end %>
+            <div class="outer">
+              <div class="inner">
+                <label><%= link_to "Cancel", booking_path(booking), method: :delete  %></label>
+              </div>
             </div>
           </div>
         <% end %>
@@ -34,3 +40,5 @@
     </div>
   </div>
 </div>
+
+
