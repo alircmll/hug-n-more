@@ -1,22 +1,36 @@
-<div id="hugger" class="d-flex">
-  <%# RENDU SIDEBAR  %>
-  <%= render 'shared/sidebarhugger' %>
-  <section id="huggerContent" class="item flex-grow-1">
-    <div class="row">
-    
-        <div class="card-deck">
-          <% @hugs.each do |thing| %>
-            <div class="card">
-              <%= cl_image_tag thing.photo, class: "card-img" %>
-              <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
-                <h4 class="card-title"><%= thing.title %></h4>
-                <p class="card-text"><%= thing.description %></p>
-                <p class="card-text"><%= thing.price %></p>
-              </div>
-            </div>
-          <% end %>
+<section id="" class="hero-header jumbotron jumbotron-fluid vh-45 d-flex">
+  <div  class="container flex-column text-center my-auto">
+    <section id="" class=" flex-column vertical-center px-4">
+      <div class="">
+        <%= cl_image_tag @hugger.photo, class: "avatar-sidebar mb-3"%>
+        <h4><%= @hugger.username %></h4>
+        <div id="hugger-infos">
+          <div class="text-center">
+            <p> <%= @hugger.address %></p>
+          </div>
         </div>
-      
-    </div>
+      </div>
+    </section>
   </section>
-</div>
+  <div id="hugger" class="">
+    <section id="huggerContent" class=" container-fluid py-4">
+      <div class="row">
+        <% @hugs.each do |thing| %>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4 ">
+            <%= link_to hug_path(thing.id) do %>
+              <div class="wrapper">
+                <div class="card ">
+                  <%= cl_image_tag thing.photo, class: "card-img" %>
+                  <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+                    <h4 class="card-title"><%= thing.title %></h4>
+                    <p class="card-text"><%= thing.description %></p>
+                    <p class="card-text"><%= thing.price %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </section>
+  </div>
