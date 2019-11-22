@@ -26,7 +26,8 @@
             <% end %>
           </div>
           <% if booking.progress == "pending" %>
-          <div class="col">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="col">
             <div class="row">
                 <%= simple_form_for [:hugger, booking.hug, booking] do |f| %>                  
                   <%= f.input :progress, :as => :hidden, :input_html => { :value => "accepted" } %>
@@ -40,6 +41,8 @@
                 <% end %>
             </div>
           </div>
+          </div>
+          
           <%end %>
         </div>
         <% end %>

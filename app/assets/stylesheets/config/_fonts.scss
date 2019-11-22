@@ -1,8 +1,18 @@
 // Import Google fonts
 // @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700,800&display=swap');
 
 // Define fonts for body and headers
-$body-font: 'Poppins', sans-serif;
-$headers-font: 'Poppins', sans-serif;
-$logo-font:'Poppins', sans-serif;
+$body-font: 'Montserrat', sans-serif;
+$headers-font: 'Montserrat', sans-serif;
+$logo-font:'Montserrat', sans-serif;
+$headers-small: 'Montserrat', sans-serif;
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+    font-family: $headers-small;
+}
