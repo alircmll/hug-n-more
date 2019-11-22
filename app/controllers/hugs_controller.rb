@@ -14,23 +14,20 @@ class HugsController < ApplicationController
     @hugger = @hug.user
   end
 
-private
+  private
 
-def search(querySearch)
-  hugs = []
-  Hug.algolia_search(querySearch).each do |hug|
-    hugs << hug
-  end
-
-  users = User.algolia_search(querySearch)
-  users.each do |user|
-    user.hugs.each do  |hug|
+  def search(querySearch)
+    hugs = []
+    Hug.algolia_search(querySearch).each do |hug|
       hugs << hug
     end
+    users = User.algolia_search(querySearch)
+    users.each do |user|
+      user.hugs.each do  |hug|
+        hugs << hug
+      end
+    end
+
+    return hugs
   end
-
-  return hugs
 end
-
-end
-
