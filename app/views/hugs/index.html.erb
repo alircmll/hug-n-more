@@ -19,86 +19,94 @@
     </div>
   </div>
 </div>
-<section id="friendly" class="container-fluid">
-  <div  class="row">
-    <div class="col-12 mb-4 text-center">
-      <h2 class="text-primary display-2 text-uppercase"><strong>Friendly</strong></h2>
-    </div>
-    <% @hugs.select(&:friendly?).each do |hug| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
-        <div class="wrapper">
-          <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
-            <div class="info">
-              <h3><%= hug.title %></h3>
-              <p><%= hug.description.first(70) %>...</p>
-              <button><%= link_to "Details", hug_path(hug) %></button>
+<%if @hugs.select(&:friendly?).count > 0 %>
+  <section id="friendly" class="container-fluid">
+    <div  class="row">
+      <div class="col-12 mb-4 text-center">
+        <h2 class="text-primary display-2 text-uppercase"><strong>Friendly</strong></h2>
+      </div>
+      <% @hugs.select(&:friendly?).each do |hug| %>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
+          <div class="wrapper">
+            <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+              <div class="info">
+                <h3><%= hug.title %></h3>
+                <p><%= hug.description.first(70) %>...</p>
+                <button><%= link_to "Details", hug_path(hug) %></button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-</section>
-<section id="tiny" class="container-fluid">
-  <div  class="row text-center">
-    <div class="col-12">
-      <h2 class="text-primary display-2 text-uppercase">Tiny</h2>
+      <% end %>
     </div>
-    <% @hugs.select(&:tiny?).each do |hug| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
-        <div class="wrapper">
-          <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
-            <div class="info">
-              <h3><%= hug.title %></h3>
-              <p><%= hug.description.first(70) %>...</p>
-              <button><%= link_to "Details", hug_path(hug) %></button>
+  </section>
+<% end %>
+<%if @hugs.select(&:tiny?).count > 0 %>
+  <section id="tiny" class="container-fluid">
+    <div  class="row text-center">
+      <div class="col-12">
+        <h2 class="text-primary display-2 text-uppercase">Tiny</h2>
+      </div>
+      <% @hugs.select(&:tiny?).each do |hug| %>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
+          <div class="wrapper">
+            <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+              <div class="info">
+                <h3><%= hug.title %></h3>
+                <p><%= hug.description.first(70) %>...</p>
+                <button><%= link_to "Details", hug_path(hug) %></button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-</section>
-<section id="fast" class="container-fluid">
-  <div  class="row">
-    <div class="col-12 mb-4">
-      <h2 class="text-primary display-2 text-uppercase">Fast</h2>
+      <% end %>
     </div>
-    <% @hugs.select(&:fast?).each do |hug| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4" >
-        <div class="wrapper">
-          <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
-            <div class="info">
-              <h3><%= hug.title %></h3>
-              <p><%= hug.description.first(70) %>...</p>
-              <button><%= link_to "Details", hug_path(hug) %></button>
+  </section>
+<% end %>
+<%if @hugs.select(&:fast?).count > 0 %>
+  <section id="fast" class="container-fluid">
+    <div  class="row">
+      <div class="col-12 mb-4">
+        <h2 class="text-primary display-2 text-uppercase">Fast</h2>
+      </div>
+      <% @hugs.select(&:fast?).each do |hug| %>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4" >
+          <div class="wrapper">
+            <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+              <div class="info">
+                <h3><%= hug.title %></h3>
+                <p><%= hug.description.first(70) %>...</p>
+                <button><%= link_to "Details", hug_path(hug) %></button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-</section>
-<section id="more" class="container-fluid">
-  <div  class="row">
-    <div class="col-12 mb-4">
-      <h2 class="text-primary display-2 text-uppercase">More</h2>
+      <% end %>
     </div>
-    <% @hugs.select(&:more?).each do |hug| %>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
-        <div class="wrapper">
-          <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
-            <div class="info">
-              <h3><%= hug.title %></h3>
-              <p><%= hug.description.first(70) %>...</p>
-              <button><%= link_to "Details", hug_path(hug) %></button>
+  </section>
+<% end %>
+<%if @hugs.select(&:more?).count > 0 %>
+  <section id="more" class="container-fluid">
+    <div  class="row">
+      <div class="col-12 mb-4">
+        <h2 class="text-primary display-2 text-uppercase">More</h2>
+      </div>
+      <% @hugs.select(&:more?).each do |hug| %>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
+          <div class="wrapper">
+            <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
+              <div class="info">
+                <h3><%= hug.title %></h3>
+                <p><%= hug.description.first(70) %>...</p>
+                <button><%= link_to "Details", hug_path(hug) %></button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-</section>
+      <% end %>
+    </div>
+  </section>
+<% end %>
 <section class="bg-white">
   <div class="container">
     <header class="section-header">
