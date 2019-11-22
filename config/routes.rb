@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'hugs#index'
   resources :huggers, only: [:show, :index]
   resources :users, only: [:show, :edit, :update]
-  resources :bookings, only: [:index, :show]
+  resources :bookings, only: [:index, :show, :destroy]
   resources :hugs, only: [:index, :show] do
     resources :bookings, only: [:new, :create]
   end
