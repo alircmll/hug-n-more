@@ -9,7 +9,7 @@
             <div class="card-product-infos">
               <h2><%= booking.hug.title %></h2>
               <br>
-              <span><i class="fas fa-calendar-check"></i> <%=booking.check_in %> | <i class="fas fa-calendar-times"></i> <%= booking.check_out%></span>
+              <span><i class="fas fa-calendar-check"></i> <%= booking.check_in.strftime('%d-%m-%Y %H:%M') %> | <i class="fas fa-calendar-times"></i> <%= booking.check_out.strftime('%d-%m-%Y %H:%M') %></span>
               <br>
               <%= link_to "cancel", booking_path(booking), method: :delete  %>
               <span><i class="fas fa-tags"></i> <%= booking.hug.price %> €</span>
