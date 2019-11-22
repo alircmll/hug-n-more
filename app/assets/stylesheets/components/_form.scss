@@ -23,21 +23,71 @@ select.form-control:focus {
   color: $primary-dark;
 }
 
+input[type=search] {
+  background: #fff url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  padding: 16px 32px;
+  width: 75%;
+  border: none;
+  // -webkit-border-radius: $border-radius;
+  // -moz-border-radius: $border-radius;
+  // border-radius: $border-radius;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+
+// input[type=search]:hover {
+// 	background-color: #fff;
+// }
+// input[type=search]:focus {
+// 	background-color: #fff;	
+// }
+
+input:-moz-placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input {
+  outline: none;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
 // FORM NEW_USER
 
 #deviceForm,
 #bookingForm {
-  height: calc(100vh - (75px + 72px));
-
+  // height: calc(100vh - (75px + 72px)) d;
+  z-index: 1;
+  
   h2 {
     font-weight: 900;
     font-size: 3rem;
     color: $primary-dark;
-    padding: 2rem 0;
+    padding: 0;
   }
 
   label {
     color: snow;
+  }
+
+  .form {
+    box-shadow: 0 -3px 6px rgba(0,0,0,0.16), 0 -1px 6px rgba(0,0,0,0.23);
+    padding: 0 !important;
   }
 
   ::placeholder {
@@ -68,7 +118,7 @@ select.form-control:focus {
 
   #new_user,
   #new_booking {
-    padding: 2rem;
+    padding: 3rem;
     background: $primary-light;
     // border-radius: $border-radius;
   }
