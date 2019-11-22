@@ -71,17 +71,23 @@ input::-webkit-search-cancel-button {
 
 #deviceForm,
 #bookingForm {
-  height: calc(100vh - (75px + 72px));
-
+  // height: calc(100vh - (75px + 72px)) d;
+  z-index: 1;
+  
   h2 {
     font-weight: 900;
     font-size: 3rem;
     color: $primary-dark;
-    padding: 2rem 0;
+    padding: 0;
   }
 
   label {
     color: snow;
+  }
+
+  .form {
+    box-shadow: 0 -3px 6px rgba(0,0,0,0.16), 0 -1px 6px rgba(0,0,0,0.23);
+    padding: 0 !important;
   }
 
   ::placeholder {
@@ -112,7 +118,7 @@ input::-webkit-search-cancel-button {
 
   #new_user,
   #new_booking {
-    padding: 2rem;
+    padding: 3rem;
     background: $primary-light;
     // border-radius: $border-radius;
   }

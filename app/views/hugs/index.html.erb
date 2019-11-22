@@ -1,30 +1,28 @@
 <div id="heroHeaderHome" class="jumbotron jumbotron-fluid h-100 vh-70 d-flex img-wrapper">
   <div  class="container flex-column text-center my-auto">
-    <h1 class="display-4">Welcome to Hug'N'More</h1>
+    <h1 class="display-4 ">Welcome to Hug'N'More</h1>
     <p class="lead">Take your time... make a hug ♥️</p>
   </div>
 </div>
 <div id="searchBar">
   <div class="container-fluid align-items-center">
     <div id="searchBarContent" class="col-12 col-md-10 offset-md-1 text-center">
-    
-        <%= form_tag hugs_path, method: :get do %>
-          <%= text_field_tag :s,
+      <%= form_tag hugs_path, method: :get do %>
+        <%= text_field_tag :s,
               params[:s],
               class: "form-control, align-self-center",
               placeholder: "Hug ? Where ?",
               type: "search"
             %>
-            <%# submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
-   
+        <%# submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>
 <section id="friendly" class="container-fluid">
   <div  class="row">
-    <div class="col-12 mb-4">
-      <h2 class="text-primary">Friendly</h2>
+    <div class="col-12 mb-4 text-center">
+      <h2 class="text-primary display-2 text-uppercase"><strong>Friendly</strong></h2>
     </div>
     <% @hugs.select(&:friendly?).each do |hug| %>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
@@ -44,7 +42,7 @@
 <section id="tiny" class="container-fluid">
   <div  class="row text-center">
     <div class="col-12">
-      <h2 class="text-primary">Tiny</h2>
+      <h2 class="text-primary display-2 text-uppercase">Tiny</h2>
     </div>
     <% @hugs.select(&:tiny?).each do |hug| %>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
@@ -64,7 +62,7 @@
 <section id="fast" class="container-fluid">
   <div  class="row">
     <div class="col-12 mb-4">
-      <h2 class="text-primary">Fast</h2>
+      <h2 class="text-primary display-2 text-uppercase">Fast</h2>
     </div>
     <% @hugs.select(&:fast?).each do |hug| %>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4" >
@@ -84,7 +82,7 @@
 <section id="more" class="container-fluid">
   <div  class="row">
     <div class="col-12 mb-4">
-      <h2 class="text-primary">More</h2>
+      <h2 class="text-primary display-2 text-uppercase">More</h2>
     </div>
     <% @hugs.select(&:more?).each do |hug| %>
       <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">

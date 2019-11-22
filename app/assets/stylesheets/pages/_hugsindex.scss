@@ -11,24 +11,20 @@
     }
 }
 
-  
-
 #searchBar {
     // background-color:white;
     align-content: center;
     align-items: center;
     position: relative;
     top: -26px;
-    
 
-    #searchBarContent {
-      
-    }
+
+    #searchBarContent {}
 }
 
 
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
     #heroHeaderHome {
         margin: 0;
     }
- }
+}

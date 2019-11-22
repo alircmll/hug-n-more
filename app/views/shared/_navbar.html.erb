@@ -57,7 +57,9 @@
             <%= link_to 'My Hugs', hugger_hugs_path, class: "list-group-item menu-item" %>
             <%= link_to 'My Pendings', edit_hugger_hug_booking_path(1,1), class: "list-group-item menu-item" %>
           <% end %>
-          <%= link_to 'My Bookings', bookings_path, class: "list-group-item menu-item" %>
+          <%# TODO, Chemin Booking inexistant  %>
+          <%= link_to 'My Bookings', hug_bookings_path(:hug_id), class: "list-group-item menu-item" %>
+          
         <% end %>
         
         <% if !user_signed_in? %>
