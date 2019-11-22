@@ -48,7 +48,7 @@ $fullpage: -36px -36px 0;
 	@return rgba($red, $green, $blue, $alpha);
 }
 
-$primary: random-color($min: 100, $max: 100);
+$primary: #B7ADCF;
 $secondary: random-color($min: 100, $max: 100);
 $primary-light: mix(#ffffff, $primary, 25%);
 $primary-dark: mix(#000000, $primary, 25%);
@@ -57,7 +57,7 @@ $primary-dark: mix(#000000, $primary, 25%);
 	$mix-main: mix($from, $to);
 	$mix-sub-from: mix($mix-main, $from);
 	$mix-sub-to: mix($mix-main, $to);
-	
+
 	box-shadow: 0 2px 0 $weight rgba($mix-sub-to, .25),
 				0 -2px 0 $weight rgba($mix-sub-from, .25),
 				2px 0 0 $weight rgba($mix-sub-to, .25),
