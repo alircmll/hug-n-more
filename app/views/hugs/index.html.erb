@@ -107,8 +107,13 @@
       <hr>
       <p class="lead-2">Sign up for free and become one of the millions of people around the world who have fallen in love with Hug'n'more.</p>
       <p class="text-center">
-        <a class="btn btn-lg btn-primary w-250" href="#">Make a Hug Right Now!</a><br>
-        <small class="text-lighter">Already registered? <a href="#">Login</a></small>
+        <!-- <a class="btn btn-lg btn-primary w-250" href="#">Make a Hug Right Now!</a><br> -->
+        <%= link_to 'Make a Hug Right Now!', new_user_registration_path, class: "btn btn-lg btn-primary w-250" %>
+        <br>
+        <small class="text-lighter">Already registered? 
+          <!-- <a href="#">Login</a> -->
+          <%= link_to 'Login', new_user_session_path%>
+        </small>
       </p>
     </header>
   </div>
