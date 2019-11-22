@@ -13,8 +13,9 @@
     <%= render 'shared/sidelog' %>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
+    <section id="passpartout">
     <%= yield %>
+    </section>
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
