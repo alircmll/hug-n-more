@@ -1,7 +1,12 @@
+<div id="booking" class="">
+  <section id="bookingContent" class="">
 <div class="container">
-  <h2>Bookings recap'</h2>
-  <div class="container min-height-container">
+  <div class=" min-height-container">
     <div class="row mt-4">
+      <div class="col-12 text-center pt-md-5">
+        <small class="lead">All of your bookings</small>
+        <p class="text-bold  text-uppercase text-primary display-3">Bookings</p>
+      </div>
       <div class="col-10 offset-1">
         <% @bookings.each do |booking| %>
           <div class="full-card d-flex flex-row">
@@ -40,5 +45,5 @@
     </div>
   </div>
 </div>
-
-
+  </section>
+</div>
