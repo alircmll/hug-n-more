@@ -28,10 +28,10 @@
       <% @hugs.select(&:friendly?).each do |hug| %>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
           <div class="wrapper">
-            <div class="card">
-              <h3><%= hug.title %></h3>
-              <p><%= hug.description.first(70) %>...</p>
+            <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
               <div class="info">
+                <h3><%= hug.title %></h3>
+                <p><%= hug.description.first(70) %>...</p>
                 <button><%= link_to "Details", hug_path(hug) %></button>
               </div>
             </div>
@@ -50,10 +50,10 @@
       <% @hugs.select(&:tiny?).each do |hug| %>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
           <div class="wrapper">
-            <div class="card">
-              <h3><%= hug.title %></h3>
-              <p><%= hug.description.first(70) %>...</p>
+            <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
               <div class="info">
+                <h3><%= hug.title %></h3>
+                <p><%= hug.description.first(70) %>...</p>
                 <button><%= link_to "Details", hug_path(hug) %></button>
               </div>
             </div>
@@ -72,10 +72,10 @@
       <% @hugs.select(&:fast?).each do |hug| %>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4" >
           <div class="wrapper">
-            <div class="card">
-              <h3><%= hug.title %></h3>
-              <p><%= hug.description.first(70) %>...</p>
+            <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
               <div class="info">
+                <h3><%= hug.title %></h3>
+                <p><%= hug.description.first(70) %>...</p>
                 <button><%= link_to "Details", hug_path(hug) %></button>
               </div>
             </div>
@@ -94,10 +94,10 @@
       <% @hugs.select(&:more?).each do |hug| %>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
           <div class="wrapper">
-            <div class="card">
-              <h3><%= hug.title %></h3>
-              <p><%= hug.description.first(70) %>...</p>
+            <div class="card"><%= cl_image_tag hug.photo, class: "card-img" %>
               <div class="info">
+                <h3><%= hug.title %></h3>
+                <p><%= hug.description.first(70) %>...</p>
                 <button><%= link_to "Details", hug_path(hug) %></button>
               </div>
             </div>
@@ -115,9 +115,12 @@
       <hr>
       <p class="lead-2">Sign up for free and become one of the millions of people around the world who have fallen in love with Hug'n'more.</p>
       <p class="text-center">
-        <a class="btn btn-lg btn-primary w-250" href="#">Make a Hug Right Now!</a><br>
-        <small class="text-lighter">Already registered? <a href="#">Login</a></small>
-      </p>
-    </header>
-  </div>
-</section>
+        <%= link_to 'Make a Hug Right Now!', new_user_registration_path, class: "btn btn-lg btn-primary w-250 my-2 text-white" %>
+        <br>
+        
+        <small class="text-lighter">Already registered? </small>
+          <%= link_to 'Login', new_user_session_path%>
+        </p>
+      </header>
+    </div>
+  </section>
