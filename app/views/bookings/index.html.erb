@@ -13,8 +13,7 @@
                 <span><i class="fas fa-calendar-check"></i> <%=booking.check_in %> | <i class="fas fa-calendar-times"></i> <%= booking.check_out%></span>
                 <br>
                 <span><i class="fas fa-tags"></i> <%= booking.hug.price %> €</span>
-                <%# BUG ICI  %>
-                <%= link_to "edit",edit_hugger_hug_booking_path(booking.id) %>
+
               </div>
               <div class="card-product-progress d-flex align-items-center justify-content-center">
                 <% if booking.progress == "pending" %>
