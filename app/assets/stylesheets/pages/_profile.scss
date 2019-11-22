@@ -19,6 +19,7 @@ body{
   cursor: pointer;
   width:120px;
   height:120px;
+  object-fit: cover;
   }
 .Profile{
   margin-left:auto;
@@ -65,6 +66,7 @@ body{
     cursor: pointer;
     width:200px;
     height:200px;
+    object-fit: cover;
   }
     .clickPopUp{
       position: relative;
@@ -76,8 +78,7 @@ body{
       -moz-transition:cubic-bezier(.34,.43,0,1.02) 0.4s;
       transition:cubic-bezier(.34,.43,0,1.02) 0.4s;
       margin-top:20px;
-      border-bottom-left-radius:20px;
-      border-bottom-right-radius:20px;
+      border-radius:$border-radius;
       padding: 13px 0px 10px 0px;
       font-size:18px;
     }
@@ -95,7 +96,7 @@ body{
   -moz-transition:cubic-bezier(.34,.43,0,1.02) 0.4s;
   transition:cubic-bezier(.34,.43,0,1.02) 0.4s;
   margin-top:20px;
-  border-radius:20px;
+  border-radius: $border-radius;
   padding: 13px 0px 10px 0px;
   font-size:18px;
 }
