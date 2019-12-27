@@ -18,8 +18,8 @@ gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'devise'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
-gem "algoliasearch-rails"
-gem 'httpclient', '~> 2.8', '>= 2.8.3' 
+#gem "algoliasearch-rails"
+gem 'httpclient', '~> 2.8', '>= 2.8.3'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

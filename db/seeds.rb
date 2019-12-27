@@ -91,7 +91,7 @@ hugs_attributes = [
     price:         180,
     title:         'Calin au coin du feu',
     category:      3,
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          f
   },
   {
@@ -100,7 +100,7 @@ hugs_attributes = [
     title:        'Calin chaud sous le plaid',
     category:     2,
     user_id:      'azerty',
-    photo:        "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:        'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:         j
   },
   {
@@ -109,7 +109,7 @@ hugs_attributes = [
     title:        'Calin reconfortant',
     category:     1,
     user_id:      'azerty',
-    photo:        "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:        'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:         c
   },
   {
@@ -118,7 +118,7 @@ hugs_attributes = [
     title:        'Calin desinteressé',
     category:     0,
     user_id:      'azerty',
-    photo:        "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:        'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:         d
   },
   {
@@ -127,7 +127,7 @@ hugs_attributes = [
     title:        "Calin d'escale",
     category:     3,
     user_id:      'azerty',
-    photo:        "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:        'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:         c
   },
   {
@@ -136,7 +136,7 @@ hugs_attributes = [
     title:        'Calin au coin de la rue',
     category:     2,
     user_id:      'azerty',
-    photo:        "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:        'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:         e
   },
   {
@@ -145,7 +145,7 @@ hugs_attributes = [
     title:         'Calin gourmand',
     category:      1,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          l
   },
   {
@@ -154,7 +154,7 @@ hugs_attributes = [
     title:         'Calin poussé',
     category:      3,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          k
   },
   {
@@ -163,7 +163,7 @@ hugs_attributes = [
     title:         'Calin efficace',
     category:      2,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          c
   },
   {
@@ -172,7 +172,7 @@ hugs_attributes = [
     title:         'Calin matinal',
     category:      0,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          d
   },
   {
@@ -181,7 +181,7 @@ hugs_attributes = [
     title:         'Calin pas de tout repos',
     category:      0,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          k
   },
   {
@@ -190,7 +190,7 @@ hugs_attributes = [
     title:         'Calin mauvais',
     category:      0,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          h
   },
   {
@@ -199,7 +199,7 @@ hugs_attributes = [
     title:         'Rendez-vous dans le parc',
     category:      0,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          j
   },
   {
@@ -208,7 +208,7 @@ hugs_attributes = [
     title:         "Si l'envie vous prends de vous envoyer en l'air",
     category:      3,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          e
   },
   {
@@ -217,7 +217,7 @@ hugs_attributes = [
     title:         "Il va y avoir de la houle",
     category:      1,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpgs.jpg',
     user:          c
   },
   {
@@ -226,7 +226,7 @@ hugs_attributes = [
     title:         "Histoire de se remettre sur les rails",
     category:      1,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          l
   },
   {
@@ -235,7 +235,7 @@ hugs_attributes = [
     title:         "Attention",
     category:      1,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          k
   },
   {
@@ -244,7 +244,7 @@ hugs_attributes = [
     title:         "Une épaule pour discuter...",
     category:      2,
     user_id:       'azerty',
-    photo:         "https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    photo:         'https://res.cloudinary.com/ddo2iitps/image/upload/v1577458512/brittani-burns-DEM5ZWZhoXI-unsplash_2_bfup6t.jpg',
     user:          j
   }
 ]

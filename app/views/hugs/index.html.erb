@@ -1,25 +1,24 @@
 <div id="heroHeaderHome" class="jumbotron jumbotron-fluid h-100 vh-70 d-flex img-wrapper">
   <div  class="container flex-column text-center my-auto">
-    <h1 class="display-4 ">Welcome to Hug'N'More</h1>
-    <p class="lead">Take your time... make a hug ♥️</p>
+    <h1 class="display-4 ">Bienvenue sur Hug'N'More</h1>
+    <p class="lead">Prends ton temps... fais un câlin ♥️</p>
   </div>
 </div>
-<div id="searchBar">
+<!-- <div id="searchBar">
   <div class="container-fluid align-items-center">
     <div id="searchBarContent" class="col-12 col-md-10 offset-md-1 text-center">
-      <%= form_tag hugs_path, method: :get do %>
-        <%= text_field_tag :s,
+      <%#= form_tag hugs_path, method: :get do %>
+        <%#= text_field_tag :s,
               params[:s],
               class: "form-control, align-self-center",
               placeholder: "Hug ? Where ?",
               type: "search"
             %>
-        <%# submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
+      <%# end %>
     </div>
   </div>
-</div>
-<% if @hugs.select(&:friendly?).count > 0 %>
+</div> -->
+<% #if @hugs.select(&:friendly?).count > 0 %>
   <section id="friendly" class="container-fluid">
     <div  class="row text-center">
       <div class="col-12 mb-4">
@@ -28,7 +27,7 @@
       <% @hugs.select(&:friendly?).each do |hug| %>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
           <div class="wrapper">
-            <div class="card"> <%= image_tag 'source-4.gif', class: "card-img" %>
+            <div class="card"> <%= image_tag 'friendly.jpg', class: "card-img" %>
               <div class="info">
                 <h3><%= hug.title %></h3>
                 <p><%= hug.description.first(70) %>...</p>
@@ -40,8 +39,8 @@
       <% end %>
     </div>
   </section>
-<% end %>
-<% if @hugs.select(&:tiny?).count > 0 %>
+<%# end %>
+<%# if @hugs.select(&:tiny?).count > 0 %>
   <section id="tiny" class="container-fluid">
     <div  class="row text-center">
       <div class="col-12">
@@ -50,7 +49,7 @@
       <% @hugs.select(&:tiny?).each do |hug| %>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
           <div class="wrapper">
-            <div class="card"><%= image_tag 'source-4.gif', class: "card-img" %>
+            <div class="card"><%= image_tag 'tiny.jpg', class: "card-img" %>
               <div class="info">
                 <h3><%= hug.title %></h3>
                 <p><%= hug.description.first(70) %>...</p>
@@ -62,8 +61,8 @@
       <% end %>
     </div>
   </section>
-<% end %>
-<% if @hugs.select(&:fast?).count > 0 %>
+<%# end %>
+<%# if @hugs.select(&:fast?).count > 0 %>
   <section id="fast" class="container-fluid">
     <div  class="row text-center">
       <div class="col-12 mb-4">
@@ -72,7 +71,7 @@
       <% @hugs.select(&:fast?).each do |hug| %>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4" >
           <div class="wrapper">
-            <div class="card"><%= image_tag 'source-4.gif', class: "card-img" %>
+            <div class="card"><%= image_tag 'fast.jpg', class: "card-img" %>
               <div class="info">
                 <h3><%= hug.title %></h3>
                 <p><%= hug.description.first(70) %>...</p>
@@ -84,8 +83,8 @@
       <% end %>
     </div>
   </section>
-<% end %>
-<% if @hugs.select(&:more?).count > 0 %>
+<%# end %>
+<%# if @hugs.select(&:more?).count > 0 %>
   <section id="more" class="container-fluid">
     <div  class="row text-center">
       <div class="col-12 mb-4">
@@ -94,7 +93,7 @@
       <% @hugs.select(&:more?).each do |hug| %>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 mb-sm-4">
           <div class="wrapper">
-            <div class="card"><%= image_tag 'source-4.gif', class: "card-img" %>
+            <div class="card"><%= image_tag 'huggers.jpg', class: "card-img" %>
               <div class="info">
                 <h3><%= hug.title %></h3>
                 <p><%= hug.description.first(70) %>...</p>
@@ -106,20 +105,20 @@
       <% end %>
     </div>
   </section>
-<% end %>
+<%# end %>
 <section class="bg-white">
   <div class="container">
     <header class="section-header">
-      <small>Join Us Now</small>
+      <small>Rejoins-nous maintenant</small>
       <h2 class="lead-8"><strong>Boost Your ♥️</strong></h2>
       <hr>
-      <p class="lead-2">Sign up for free and become one of the millions of people around the world who have fallen in love with Hug'n'more.</p>
+      <p class="lead-2">Inscrit-toi gratuitement et fait parti des milliers de personnes qui se sont trouvées grâce à Hug'n'more.</p>
       <p class="text-center">
-        <%= link_to 'Make a Hug Right Now!', new_user_registration_path, class: "btn btn-lg btn-primary w-250 my-2 text-white" %>
+        <%= link_to 'Faire un câlin maintenant !', new_user_registration_path, class: "btn btn-lg btn-primary w-250 my-2 text-white" %>
         <br>
 
-        <small class="text-lighter">Already registered? </small>
-          <%= link_to 'Login', new_user_session_path%>
+        <small class="text-lighter">Déjà inscrit? </small>
+          <%= link_to "S'identifier", new_user_session_path%>
         </p>
       </header>
     </div>

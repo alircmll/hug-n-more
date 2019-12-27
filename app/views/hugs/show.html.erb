@@ -10,19 +10,19 @@
         <h1 class="text-cold text-primary"><%= @hug.title %></h1>
         <hr>
         <div class="contentDescription">
-          <p class="h6 text-uppercase"> Category - <span class="text-primary"><%= @hug.category.to_s.capitalize %></span></p>
+          <p class="h6 text-uppercase"> Catégorie - <span class="text-primary"><%= @hug.category.to_s.capitalize %></span></p>
           <p><%= @hug.description %> </p>
         </div>
         <hr>
-        <p class="text-right bold">Price <span class="text-primary"><%= @hug.price %></span> € </p>
+        <p class="text-right bold">Prix <span class="text-primary"><%= @hug.price %></span> € </p>
         <hr>
         <div class="text-center pt-4">
-          <p class="h4 text-primary mb-4">Shared with ♥️ by</p>
+          <p class="h4 text-primary mb-4">Partagé avec ♥️ par</p>
           <%= cl_image_tag @hugger.photo, class: "avatar-sidebar mb-4"%>
           <h4><%= @hugger.username %></h4>
           <div id="hugger-infos mb-4">
             <p> <%= @hugger.address %></p>
-            <%= link_to 'Booking', new_hug_booking_path(@hug) , :class => 'btn btn-primary btn-hug' %>
+            <%= link_to 'Réserver', new_hug_booking_path(@hug) , :class => 'btn btn-primary btn-hug' %>
           </div>
         </div>
       </div>

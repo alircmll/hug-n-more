@@ -4,8 +4,8 @@
   <div class=" min-height-container">
     <div class="row mt-4">
       <div class="col-12 text-center pt-md-5">
-        <small class="lead">All of your</small>
-        <p class="text-bold  text-uppercase text-primary display-3">Bookings</p>
+        <small class="lead">Toutes vos</small>
+        <p class="text-bold  text-uppercase text-primary display-3">Réservations</p>
       </div>
       <div class="col-10 offset-1">
         <% @bookings.each do |booking| %>
@@ -20,23 +20,23 @@
                 <span><i class="fas fa-tags"></i> <%= booking.hug.price %> €</span>
               </div>
               <div class="card-product-progress d-flex align-items-center justify-content-center">
-                <% if booking.progress == "pending" %>
+                <% if booking.progress == "attente" %>
                   <p><i class="fas fa-hourglass-half"></i> <%= booking.progress.capitalize %></p>
                 <% end %>
-                <% if booking.progress == "accepted" %>
+                <% if booking.progress == "acceptée" %>
                   <p><i class="fas fa-user-check"></i> <%= booking.progress.capitalize %></p>
                 <% end %>
-                <% if booking.progress == "refused" %>
+                <% if booking.progress == "refusée" %>
                   <p><i class="fas fa-user-times"></i> <%= booking.progress.capitalize %></p>
                 <% end %>
-                <% if booking.progress == "canceled" %>
+                <% if booking.progress == "annulée" %>
                   <p><i class="fas fa-times-circle"></i> <%= booking.progress.capitalize %></p>
                 <% end %>
               </div>
             </div>
             <div class="outer">
               <div class="inner">
-                <label><%= link_to "Cancel", booking_path(booking), method: :delete  %></label>
+                <label><%= link_to "annuler", booking_path(booking), method: :delete  %></label>
               </div>
             </div>
           </div>

@@ -2,10 +2,10 @@
   <div class="row h-100 justify-content-center align-items-center">
     <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 form">
       <%= simple_form_for [@hug, @booking] do |f| %>
-      <h2>Booking</h2>
+      <h2>Réservation</h2>
         <%= f.input :check_in, as: :datetime, class: "selectipicker" %>
         <%= f.input :check_out, as: :datetime  %>
-        <%= f.button :submit, class: "btn btn-primary btn-block text-primary-dark mt-5" %>
+        <%= f.button :submit, 'Réserver maintenant' , class: "btn btn-primary btn-block text-primary-dark mt-5" %>
       <% end %>
     </div>
   </div>
