@@ -17,7 +17,7 @@ gem 'webpacker'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'devise'
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 #gem "algoliasearch-rails"
 gem 'httpclient', '~> 2.8', '>= 2.8.3'
 
